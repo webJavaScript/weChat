@@ -1,0 +1,58 @@
+<!-- 视频播放 -->
+<template name="fh-detail-video">
+    <view class="fh-detail-video">
+        <view class="video-play">
+            <video 
+            src="{{videoInfo.video_url}}" 
+            class="fh-video-show" 
+            bindplay="videoPlay"
+            autoplay="{{videoAutoPlay}}"
+            controls  
+            objectFit="cover"
+            poster="{{videoInfo.litpic || ''}}"
+            style="{{'height:' + videoHeight}}"></video>
+        </view>
+    </view>
+    <view class="fh-detail-share-btn">
+        <view class="fh-video-playtimes">
+            <image src="../../images/ico-video.png"></image>
+            <text>
+                {{videoInfo.playtimes}}次
+            </text>
+        </view>
+        <button open-type="share" class="share-btn" plain>
+            <image src="../../images/ico-share.png"></image>
+            <text>分享</text>
+        </button>
+    </view>
+</template>
+
+<!-- 视频介绍 -->
+<template name="fh-detail-intruduce">
+    <view class="fh-detail-intruduce">
+        <view class="video-title">
+            <text>{{videoInfo.title}}</text>
+        </view>
+        <view class="video-create-time">
+            <text>发布时间：{{videoInfo.ctime}}</text>
+        </view>
+        <view class="video-doctor">
+            <view class="doctor-img">
+                <image src="{{videoInfo.doctor.default_avatar}}"></image>
+            </view>
+            <view class="doctor-info">
+                <view>
+                    <text class="name">{{videoInfo.doctor.zname}}</text>
+                    <text class="position">{{videoInfo.doctor.position}}</text>
+                </view>
+                <view>
+                    <text class="hospital">{{videoInfo.doctor.hospital_name}}</text>
+                    <text class="disease">{{videoInfo.doctor.major}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="video-description">
+            {{videoInfo.description}}
+        </view>
+    </view>
+</template>

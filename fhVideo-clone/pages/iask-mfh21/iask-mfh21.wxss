@@ -1,0 +1,9 @@
+/* pages/web-view-banner/web-view-banner.wxss */
+.webView {
+    height: 100%;
+    font-size: 100rpx;
+}
+.webView web-view{
+    width: 100%;
+    height: 40em;
+}

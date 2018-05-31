@@ -1,0 +1,13 @@
+<!--pages/video-list/video-list.wxml-->
+<import src="../../utils/template/video-list.wxml" />
+<view>
+    <template is="fh-video-list" data="{{videoList}}" />
+    <view class="loading" wx:if="{{total == 0}}">
+        <!-- <icon type="waiting"></icon> -->
+        <view class="loading-img">
+            <image src="../../images/nolist.png"></image>
+        </view>
+        <text>视频拍摄中，敬请期待……</text>
+    </view>
+
+</view>

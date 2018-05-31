@@ -1,0 +1,11 @@
+<!--pages/index/index.wxml-->
+<import src="../../utils/template/departments.wxml" />
+<import src="../../utils/webView/banner.wxml" />
+<view>
+  <!-- <view class="bannerTouch">
+    <template is="swiper" data="{{swipers}}" />
+  </view> -->
+  <view class="fh-departments">
+    <template is="fh-departments" data="{{sub_departments, toViewId, scrollViewHeight}}" />
+  </view>
+</view>

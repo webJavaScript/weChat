@@ -1,0 +1,31 @@
+<template name="fh-video-list">
+    <view class="fh-video-list">
+       <view class="fh-video" bindtap="showVideoDetail" wx:for="{{videoList}}" wx:key="{{item.vid}}" data-illness-id="{{item.vid}}">
+          <view class="video-img">
+              <view class="video-pic">
+                  <image class="video-image" src="{{item.litpic}}" lazy-load></image>
+              </view>
+              <view class="video-play-btn">
+                  <image src="../../images/ico-btn-play.png"></image>
+              </view>
+              <view class="video-time">
+                  <text>{{item.durations_time.minute + ':' + item.durations_time.second}}</text>
+              </view>
+          </view>
+          <view class="video-info">
+              <view class="title">
+                  <text>{{item.title}}</text>
+              </view>
+              <view class="doctor-info">
+                  <image src="../../images/ico-doctor-av.png"></image>
+                  <text class="name">{{item.doctor.zname}}</text>
+                  <text class="position">{{item.doctor.position}}</text>
+              </view>
+              <view class="create-info">
+                  <text class="ctime">{{item.ctime}}</text>
+                  <text class="playtimes">{{item.playtimes}}次播放</text>
+              </view>
+          </view>
+       </view>
+    </view>
+</template>

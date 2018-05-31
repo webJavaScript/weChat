@@ -1,0 +1,5 @@
+<!--pages/web-view-banner/web-view-banner.wxml-->
+<import src="../../utils/webView/banner.wxml" />
+<view class="webView">
+    <template is="bannerAd" data="{{imageSrc}}" />
+</view>

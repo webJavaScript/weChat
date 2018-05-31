@@ -1,0 +1,35 @@
+<wxs module="wxsDisease" src="./disease.wxs" />
+<!-- 疾病视频导航 -->
+<template name="fh-departments">
+  <scroll-view scroll-into-view="{{toViewId}}" style="height: 100vh;" scroll-y="true" srcoll-with-animation="true">
+    <view class="fh-video departments">
+      <view class="fh-video-nav" wx:for="{{sub_departments}}" wx:key="{{department.department_id}}" wx:for-item="department">
+        <!-- 科室名称 -->
+        <view class="dm-block">
+          <view class="fh-v-nav-title dm-name" data-dm-id="{{department.department_id}}" id="{{'dm-id-' + department.department_id}}">
+            <text class="ico"></text>
+            <text>{{department.department_name}}</text>
+          </view>
+          <!-- 疾病名称 -->
+          <view class="fh-v-nav-disease dm-diseases">
+            <!-- 默认显示 SLICE_LENGTH 条 -->
+            <block>
+              <view class="dm-dis" bindtap="getDisList" data-disease-id="{{department.department_id + '_' + disease.disease_id}}" data-title="{{disease.disease_name}}" wx:for="{{department.disease_info}}" wx:key="*this" wx:for-item="disease">
+                <text>{{disease.disease_name}}</text>
+              </view>
+            </block>
+            <!-- 多于 SLICE_LENGTH 条 显示更多 -->
+            <block wx:if="{{wxsDisease.showMoreBtn(department.disease_info.length)}}">
+              <view class="dm-dis {{department.isHide ? 'hide' : ''}}" bindtap="showMoreDis" data-disease-id="{{department.department_id}}">
+                <text class="showMore">更多</text>
+              </view>
+              <view class="dm-dis {{!department.isHide ? 'hide' : ''}}" bindtap="foldedMoreDis" data-disease-id="{{department.department_id}}">
+                <text class="showMore">收起</text>
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</template>

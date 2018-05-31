@@ -1,0 +1,47 @@
+.departments {
+    padding: 0 20rpx;
+    font-size: 50rpx;
+  }
+  .departments .ico {
+    display: inline-block;
+    width: .8em;
+    height: .8em;
+    background-color: #6797FC;
+    border-radius: 10rpx;
+    margin-right: .3em;
+  }
+  .departments .fh-video-nav {
+    border-bottom: 1px dotted #878787;
+    /* margin-bottom: 1em; */
+    margin-top: 1em;
+  }
+  .departments .fh-video-nav:last-child {
+    border-bottom: none;
+    margin-bottom: none;
+  }
+  .departments .dm-diseases {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    color: #878787;
+    font-size: .65em;
+    padding: .5em .5em .5em 1em;
+    line-height: 2em;
+  }
+  .departments .dm-diseases .hide {
+    display: none;
+  }
+  .departments .dm-diseases .showMore {
+    color: #6797FC;
+  }
+  .departments .dm-dis {
+    margin-right: 1.5em;
+    color: #878787;
+  }
+  .departments .dm-name {
+    font-size: .8em;
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }

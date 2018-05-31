@@ -1,0 +1,17 @@
+/* pages/index/index.wxss */
+@import "../../utils/template/departments.wxss";
+
+.bannerTouch {
+  font-size: 100rpx;
+  width: 100%;
+  height: 4em;
+  margin-bottom: .2em;
+}
+.bannerTouch .banner-img {
+  width: 100%;
+  height: 100%;
+}
+.bannerTouch .banner-img image {
+  width: 100%;
+  height: 100%;
+}

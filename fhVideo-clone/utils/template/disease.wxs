@@ -1,0 +1,18 @@
+/* 最大显示数量 默认显示十条 */
+var SLICE_LENGTH = 10;
+
+var moreBtnIndex = SLICE_LENGTH - 1;
+
+var showMoreBtn = function(len) {
+    return len > SLICE_LENGTH;
+}
+
+var showItemIndex = function(index) {
+    return index < moreBtnIndex;
+}
+
+module.exports = {
+    showMoreBtn: showMoreBtn,
+    showItemIndex: showItemIndex,
+    largeDis: SLICE_LENGTH
+}

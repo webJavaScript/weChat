@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/video-list/video-list",
+    "pages/tabBar-webView/tabBar-webView",
+    "pages/video-mfh21/video-mfh21",
+    "pages/iask-mfh21/iask-mfh21"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#6797FC",
+    "navigationBarTextStyle": "light",
+    "navigationBarTitleText": "飞华微视",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/ico-home.png",
+      "selectedIconPath": "images/ico-home-active.png"
+    },
+    {
+      "pagePath": "pages/video-list/video-list",
+      "text": "列表",
+      "iconPath": "images/ico-list.png",
+      "selectedIconPath": "images/ico-list-active.png"
+    },
+    {
+      "pagePath": "pages/iask-mfh21/iask-mfh21",
+      "text": "问医生",
+      "iconPath": "images/ico-ask.png",
+      "selectedIconPath": "images/ico-ask-active.png"
+    },
+    {
+      "pagePath": "pages/video-mfh21/video-mfh21",
+      "text": "科普视频",
+      "iconPath": "images/ico-video.png",
+      "selectedIconPath": "images/ico-video-active.png"
+    }],
+    "color": "#999999",
+    "selectedColor": "#6797FC",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "block",
+    "position": "bottom"
+  }
+}

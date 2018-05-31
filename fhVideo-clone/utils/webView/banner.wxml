@@ -1,0 +1,33 @@
+<template name="swiper">
+      <view class="bannerTouch" wx:for="{{swipers}}" wx:for-item="swiper" wx:key="*this">
+            <swiper
+              indicator-dots="{{swiper.indicatorDots}}"
+              indicator-color="{{swiper.indicatorColor}}"
+              indicator-active-color="{{swiper.indicatorActiveColor}}"
+              autoplay="{{swiper.autoplay}}"
+              interval="{{swiper.interval}}"
+              duration="{{swiper.duration}}"
+              circular="{{swiper.circular}}"
+              vertical="{{swiper.vertical}}"
+              previous-margin="{{swiper.previousMargin}}"
+              next-margin="{{swiper.nextMargin}}"
+              display-multiple-items="{{swiper.displayMultipleItems}}"
+              skip-hidden-item-layout="{{swiper.skipHiddenItemLayout}}"
+              bindchange="{{swiper.bindchange}}"
+              bindanimationfinish="{{swiper.bindanimationfinish}}"
+              current="{{swiper.current}}"
+              current-item-id="{{swiper.currentItemId}}"
+              style="height: 100%; min-height: 2em;"
+            >
+                  <block wx:for="{{swiper.list}}" wx:key="*this" wx:for-item="img">
+                        <swiper-item class="banner-img" bindtap="toImageWebView">
+                              <image src="{{img.src}}"></image>
+                        </swiper-item>
+                  </block>
+            </swiper>
+      </view>
+</template>
+
+<template name="bannerAd">
+      <web-view src="{{imageSrc}}" style="height: 120%;"></web-view>
+</template>
