@@ -1,0 +1,15 @@
+.uc-fh-wrap {
+    padding: 15rpx 30rpx 30rpx 30rpx;
+}
+.uc-fh-h3, .uc-fh-p {
+    word-wrap: break-word;
+    line-height: 1.8;
+}
+.uc-fh-h3 {
+    font-size: 34rpx;
+    font-weight: normal;
+    margin-top: 15rpx;
+}
+.uc-fh-p {
+    font-size: 34rpx;
+}

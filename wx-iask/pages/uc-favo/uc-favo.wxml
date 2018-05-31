@@ -1,0 +1,22 @@
+<view class="uc-favo-wrap">
+    
+    <import src="../../templates/cm-table/cm-table.wxml" />
+    <template is="cmTable" data="{{...nav}}"></template> 
+
+    <view class="uc-favo-count" wx:if="{{num}}">共{{num}}个条目</view>
+
+    <import src="../../templates/uc-iask-list/uc-iask-list.wxml" />
+    <import src="../../templates/doctor-list/doctor-list.wxml" />
+
+    <view class="bg-white">
+        <block wx:for="{{list}}" wx:key="index">
+            <template is="{{nav.value =='iask' ? 'uc-iask-list' : 'doctorList'}}" data="{{...item}}"></template>
+        </block>
+    </view>
+</view>
+
+<import src="/templates/plain/plain.wxml"/>
+<template is="plain" wx:if="{{plain}}"></template>
+
+<import src="/templates/loading/loading.wxml" />
+<template is="loading" wx:if="{{loading}}"></template>

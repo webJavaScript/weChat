@@ -1,0 +1,109 @@
+<view class="qd-wrap">
+    <view class="qd">
+
+        <view class="qd-ls-user" wx:if="{{question}}">
+            <view class="qd-ls-time">{{question.time}}</view>
+            <view class="qd-lsu-wrap clearfix">
+                <view class="qd-lsu-main fr">
+                    <view class="qd-lsum-content">{{question.description}}（{{question.sex}} {{question.ageShow}}）</view>
+                </view>
+            </view>
+        </view>
+
+        <view class="ql-ls-answer-null" wx:if="{{answer.length <= 0}}">
+            <image src="/assets/images/coffe.png"></image>
+            <text class="ql-ls-answer-null-txt">请稍等，医生正在为您解答…</text>
+        </view>
+
+        <view wx:for="{{answer}}" wx:key="{{index}}">
+            <view class="qd-ls-doctor">
+                <view class="qd-ls-time">{{item.time}}</view>
+                <view class="qd-lsu-wrap">
+                    <view class="qd-lsd-main">
+                        <navigator open-type="navigate" class="qd-lsdm-left image-pre" url="/pages/doctor/doctor?uid={{item.userInfo.uid}}&view=question-detail">
+                            <image mode="widthFix" class="all-img" src="{{item.userInfo.default_avatar}}"></image>
+                        </navigator>
+                        <view class="qd-lsdm-right">
+                            <view class="qd-lsdmr-title">
+                                <navigator open-type="navigate" class="qd-lsdmr-name" url="/pages/doctor/doctor?uid={{item.userInfo.uid}}&view=question-detail">
+                                    {{item.userInfo.frontend_nickname}}
+                                </navigator>
+                                <view class="qd-lsdmr-job">{{item.userInfo.position}}</view>
+                                <view class="qd-lsdmr-hos">{{item.userInfo.hospital}}</view>
+                            </view>
+                            <view class="qd-lsdmr-tele" wx:if="{{item.userInfo.telphone}}">
+                                咨询电话：<span class="qd-lsdmr-tele-hl">{{item.userInfo.telphone}}</span>
+                            </view>
+                            <view class="qd-lsdmr-main">
+                                <!--<span class="qd-lsdmr-main-add">追问回答:</span>-->
+                                <view class="qd-lsdmr-main-had" wx:if="{{item.adopttime != 0}}">已采纳</view>
+                                {{item.content}}{{item.suggest}}
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+            <view wx:for="{{item.chase}}" wx:for-item="subItem" wx:key="{{index}}">
+                <view class="qd-ls-user" wx:if="{{subItem.type == 0}}">
+                    <view class="qd-ls-time">{{subItem.time}}</view>
+                    <view class="qd-lsu-wrap clearfix">
+                        <view class="qd-lsu-main fr">
+                            <view class="qd-lsum-title">追问<span class="qd-lsum-title-hl">{{item.userInfo.frontend_nickname}}:</span>
+                            </view>
+                            <view class="qd-lsum-content">{{subItem.content}}</view>
+                        </view>
+                    </view>
+                </view>
+
+                <view class="qd-ls-doctor" wx:if="{{subItem.type == 1}}">
+                    <view class="qd-ls-time">{{subItem.time}}</view>
+                    <view class="qd-lsu-wrap">
+                        <view class="qd-lsd-main">
+                            <navigator open-type="navigate" class="qd-lsdm-left image-pre" url="/pages/doctor/doctor?uid={{item.userInfo.uid}}&view=question-detail">
+                                <image mode="widthFix" class="all-img" src="{{item.userInfo.default_avatar}}"></image>
+                            </navigator>
+                            <view class="qd-lsdm-right">
+                                <view class="qd-lsdmr-title">
+                                    <navigator open-type="navigate" class="qd-lsdmr-name" url="/pages/doctor/doctor?uid={{item.userInfo.uid}}&view=question-detail">
+                                        {{item.userInfo.frontend_nickname}}
+                                    </navigator>
+                                    <view class="qd-lsdmr-job">{{item.userInfo.position}}</view>
+                                    <view class="qd-lsdmr-hos">{{item.userInfo.hospital}}</view>
+                                </view>
+                                <view class="qd-lsdmr-tele" wx:if="{{item.userInfo.telphone}}">
+                                    咨询电话：<span class="qd-lsdmr-tele-hl">{{item.userInfo.telphone}}</span>
+                                </view>
+                                <view class="qd-lsdmr-main">
+                                    <span class="qd-lsdmr-main-add">追问回答:</span>
+                                    <!--<view class="qd-lsdmr-main-had">已采纳</view>-->
+                                    {{subItem.content}}
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+        </view>
+    </view>
+
+    <view class="qd-bottom" wx:if="{{userInfos.length}}">
+        <view class="qd-bottom-left">
+            <view>追</view>
+            <view>问</view>
+        </view>
+        <scroll-view scroll-x class="qd-bottom-right">
+            <navigator open-type="navigate" class="qd-bottom-ls" wx:for="{{userInfos}}" wx:key="{{index}}" url="../iask-post/iask-post?uid={{item.uid}}">
+                <view class="qd-bottom-ls-imgwrap image-pre">
+                    <image mode="widthFix" class="all-img"
+                           src="{{item.default_avatar}}"></image>
+                </view>
+                <view class="qd-bottom-ls-name">{{item.frontend_nickname}}</view>
+            </navigator>
+        </scroll-view>
+    </view>
+
+    <view wx:if="{{favoEnabled}}" class="qd-bottom-save {{isFavo && 'qd-bottom-saved'}}" bindtap="bindFavo" data-type="{{isFavo ? 'remove' : 'add'}}" data-qid="{{question.id}}">
+    </view>
+</view>

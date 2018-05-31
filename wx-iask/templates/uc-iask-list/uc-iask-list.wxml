@@ -1,0 +1,22 @@
+<template name="uc-iask-list">
+    <navigator class="uc-iask-item" url="/pages/question-detail/question-detail?qid={{qid}}">
+        <view class="uc-iask-title">
+            <i class="icon-uc-iask-q"></i>
+            <tex class="uc-iask-title-txt wbwr">{{title}}</tex>
+        </view>
+
+        <view class="uc-iask-anw" wx:if="{{content}}">
+            <i class="icon-uc-iask-a"></i>
+            <view class="uc-iask-anw-txt wbwr">
+                <span class="uc-iask-anw-uname" wx:if="{{doctor.uid != auid}}">{{doctor.frontend_nickname}}：</span>
+                <span class="uc-iask-anw-uname" style="color: #666;" wx:else>回答：</span>
+                {{content}}
+            </view>
+        </view>
+
+        <view class="uc-iask-info">
+            <text class="uc-iask-time">{{time}}</text>
+            <text class="uc-iask-num" wx:if="{{answerNum}}">{{answerNum}}条回答</text>
+        </view>
+    </navigator>
+</template>

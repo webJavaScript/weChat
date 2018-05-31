@@ -1,0 +1,61 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/uc/uc",
+        "pages/iask-post/iask-post",
+        "pages/find-doctor/find-doctor",
+        "pages/find-doctor-hospital/find-doctor-hospital",
+        "pages/find-doctor-department/find-doctor-department",
+        "pages/find-doctor-hashospital/find-doctor-hashospital",
+        "pages/uc-iask/uc-iask",
+        "pages/uc-favo/uc-favo",
+        "pages/uc-fh/uc-fh",
+        "pages/question-detail/question-detail",
+        "pages/doctor/doctor",
+        "pages/doctor-iask/doctor-iask",
+        "pages/map/map",
+        "pages/find-nearby/find-nearby",
+        "pages/department/department",
+        "pages/iask/iask",
+        "pages/iask-search/iask-search",
+        "pages/iask-search-result/iask-search-result",
+        "pages/article-detail/article-detail"
+    ],
+    "networkTimeout": {
+        "request": 6000
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#6595ff",
+        "navigationBarTitleText": "飞华问医生",
+        "navigationBarTextStyle": "#fff"
+    },
+    "tabBar": {
+        "color": "#999999",
+        "selectedColor": "#6595ff",
+        "position": "bottom",
+        "backgroundColor": "#fff",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "看医生",
+                "iconPath": "./assets/images/问医生未选.png",
+                "selectedIconPath": "./assets/images/问医生.png"
+            },
+            {
+                "pagePath": "pages/iask/iask",
+                "text": "看问答",
+                "iconPath": "./assets/images/问答未选@2x.png",
+                "selectedIconPath": "./assets/images/问答@2x.png"
+            },
+
+            {
+                "pagePath": "pages/uc/uc",
+                "text": "我的",
+                "iconPath": "./assets/images/我的未选.png",
+                "selectedIconPath": "./assets/images/我的.png"
+            }
+        ]
+    }
+}

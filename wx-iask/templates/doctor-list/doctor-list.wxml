@@ -1,0 +1,32 @@
+<template name="doctorList">
+    <view class="doc-list-wrap">
+        <navigator class="doc-list" url="../../pages/uc-fh/uc-fh" url="../../pages/doctor/doctor?uid={{uid}}">
+            <view  class="doc-list-top clearfix">
+                <view class="doc-list-imgwrap fl">
+                    <view class="doc-list-imgbox image-pre">
+                        <image mode="widthFix" src="{{default_avatar}}"></image>
+                    </view>
+                    <!--<view class="icon icon-vip"></view>-->
+                </view>
+                <view class="doc-list-info">
+                    <view class="doc-li-top clearfix">
+                        <text class="doc-lit-name fl">{{frontend_nickname}}</text>
+                        <view class="doc-lit-time fl">{{position}}</view>
+                    </view>
+                    <view class="doc-li-bottom clearfix">
+                        <span class="doc-lib-info fl">{{hospital_name}}</span>
+                        <span class="doc-lib-info fl">{{cid_name}}</span>
+                        <span class="doc-lib-tag fl">{{hospitalLevel}}</span>
+                    </view>
+                    <view class="doc-list-middle">
+                        擅长：{{goodable}}
+                    </view>
+                </view>
+            </view>
+
+        </navigator>
+        <navigator url="../../pages/iask-post/iask-post?uid={{uid}}" class="doc-list-bottom clearfix">
+            <view bindtap="toAsk" class="fl doc-lb-left">向TA提问</view>
+        </navigator>
+    </view>
+</template>

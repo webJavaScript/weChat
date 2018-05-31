@@ -1,0 +1,4 @@
+@import "../../templates/uc-iask-list/uc-iask-list.wxss";
+.uc-iask-items {
+    background-color: #fff;
+}

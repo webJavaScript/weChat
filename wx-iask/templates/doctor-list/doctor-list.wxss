@@ -1,0 +1,108 @@
+.doc-list-wrap{
+    position: relative;
+    background: #fff;
+}
+.doc-list{
+    border-bottom: 1rpx solid #e1e1e1;
+    padding: 26rpx 30rpx 30rpx;
+    position: relative;
+}
+.doc-list-top{
+    display: flex;
+    padding-bottom: 58rpx;
+}
+.doc-list-imgwrap{
+    width: 88rpx;
+    height: 88rpx;
+    position: relative;
+    margin-right: 20rpx;
+}
+.doc-list-imgbox{
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.doc-list-imgbox image{
+     width: 100%;
+}
+.icon-vip{
+    width: 28rpx;
+    height: 28rpx;
+    position: absolute;
+    bottom: 0;
+    right: 3rpx;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OEEyNkZCMjgzRkNBMTFFN0IwMTlGMDk4RkZDQzVGNEMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OEEyNkZCMjkzRkNBMTFFN0IwMTlGMDk4RkZDQzVGNEMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4QTI2RkIyNjNGQ0ExMUU3QjAxOUYwOThGRkNDNUY0QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4QTI2RkIyNzNGQ0ExMUU3QjAxOUYwOThGRkNDNUY0QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnWvnOcAAAQISURBVHjazFlbSBVRFN1O5gMUe2g+CM1H+tHDTMNePxl9WPkTRVJ+9BAygkj/+g3yK0yiVPrJ8qeyICgwzBKKLHuZRVF6QcnwgZn51jRtbe+5eEdn7sw9c726YX3cOXPOXnfPmbX3PuMzdZtkzQ/YBuwCNgKJQCQQJMYHgQ6gCfgE1AKvgL8yznwkiKYAecBBYIWbc3uBSqAMaJgvoslAIZDJ88iaTQGPgfNAo5kJiol7AoAi4B2w1wMkSayRKda8LHxYIpog9lU+4EueN17znPCRIEt0C1AHbKL5N/bxGkh3lyhPeAaEkfdsJVCjR1bRedwPnWTGmxYkfCcYEQ0Q8hFGC2dhgkOAK6KFXtqTZvbsRT0dTRZy4UuLwyaAVJHVVBEtXEQkHdJVODuinBbfG4s5htfkEMWeQPJMQ36ZJGq7i2QImZ0YNJFelhKF7iQKWU+0JJCo/RFR/1ejDMZRbXBE8IypjLO1gijmqPpaXC62fQTRiyyDEgZlQcZzkFwnKPCfrDSTwZhbLj96f1FguLaIPXNJOixqP9GyZNfzkwpmSLK1Q4WGWsxsAebmrwiBDTG8fXmq6/HYY/pj/JjjT6mvNV81u1eZWzoTzTB1+8/7qHdQdr7EH5zUKCmjj2AP+mnPjT6MmITO/OZ92fXUnRcrQxGyZGwDzUR9n+2EbaUaNdYqbIF92nPXntWI5pQ7RJMVUZm7Z7YSbUexx+deC92BbZMy83v8D1FrhbseE5louNtEB9Bd/Kqbez0y0x5ZlYtZ0WwpNydlagtnosFSctxyU0NMoHYxOTO/A6OIVh9wUkVIUvM1GW/BCsla2x2if8Ou3/6E03byDutE9zFok3LHRAekZo7348V6oCEmG+xZixUgPk891nRFNiwDTLRLOqqt5TqaihQbna2WJI5k1xNZT12K6Lslp0MLh9s0dDPbnolmR5P3qJw1KWbbVe2SYVJbavyWq1Mqv+XuS5KzNSqiNyKPP36VQtyw66e81TLReqBPegnOWFqa6lyp2cqskOznDpWJjgH3rEX1lv5YZ7VRzWlkXAuOOXS0xBLRH6i+x3UeyrdLViv9UudW5ANQLb0Uk3xzEglgVP2ifbkAZaixQrJadB6q5o47v7eW+qagOFRQWfZs1FFl9ZFzc5fmUKXZp3lF4pxpMRgfnhVotcvTZYQXz5tc6ibZD4lH9A4geOAQ0L2AJLtFnzRidPbE5Q23lEMLQHJI+LaZOSQjkQR2Az1eJNkjfNbrlXnkgizvk49eIMk+tuuRNCI63YYJssVCLubjfKlY+GgyKpyNbFRIFmtalQdJVok184UPskrUWTL4Y8Nm4DrwW4Jcr5ibKtYyXWL6ePCDWBJpfxD7Th74IPZfgAEAM1AGWLgLkZUAAAAASUVORK5CYII=) no-repeat;
+    background-size: contain;
+
+}
+.doc-list-info{
+    flex: 1;
+}
+.doc-lit-name{
+    color: #333333;
+    font-size: 34rpx;
+}
+.doc-li-top{
+    line-height: 42rpx;
+}
+.doc-lit-time{
+    color: #999999;
+    font-size: 26rpx;
+    padding-top: 10rpx;
+    line-height: 30rpx;
+    margin-left: 13rpx;
+}
+.doc-li-bottom{
+    line-height: 50rpx;
+    font-size: 26rpx;
+    color: #666666;
+}
+.doc-lib-info{
+    margin-right: 20rpx;
+}
+.doc-lib-tag{
+    line-height: 26rpx;
+    font-size: 20rpx;
+    color: #fff;
+    background: #ffa800;
+    border-radius: 6rpx;
+    padding: 0 9rpx;
+    margin-top: 11rpx;
+}
+.doc-list-middle{
+    color: #999999;
+    font-size: 28rpx;
+    line-height: 42rpx;
+    margin-bottom: 16rpx;
+    height: 40rpx;
+    max-width: 580rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.doc-lb-left{
+    color: #ff6362;
+    font-size: 28rpx;
+    line-height: 54rpx;
+    padding: 0 25rpx;
+    border-radius: 27rpx;
+    border: 1rpx solid  #ff6362;
+    overflow: hidden;
+    background: #fff;
+}
+.doc-lb-left:active{
+    background: pink;
+}
+.doc-lb-right{
+    line-height: 54rpx;
+    color: #999999;
+    font-size: 24rpx;
+}
+ .doc-list-bottom{
+    position: absolute;
+    left: 138rpx;
+    bottom: 30rpx;
+    border-radius: 27rpx;
+    overflow: hidden;
+} 

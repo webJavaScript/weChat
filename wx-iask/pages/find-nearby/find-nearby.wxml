@@ -1,0 +1,38 @@
+<view class="fdh-wrap">
+
+    <import src="../../templates/cm-table/cm-table.wxml" />
+    <template is="cmTable" data="{{...nav}}"></template>
+
+
+
+    <view class="pt-100">
+        <view wx:if="{{nav.value == 'iask'}}">
+            <view class="fdh" wx:if="{{title != 0}}">
+                <view class="fdh-main-ul">
+                    <import src="../../templates/hospital-near-list/hospital-near-list.wxml" />
+                    <block wx:for="{{markers}}" wx:key="{{index}}">
+                        <template is="hospitalList" data="{{...item}}"></template>
+                    </block>
+                </view>
+            </view>
+            <view wx:else>
+                <import src="../../templates/plain/plain.wxml" />
+                <template is="plain"></template>
+            </view>
+        </view>
+        <view wx:else>
+            <view class="fdh" wx:if="{{title != 0}}">
+                <view class="fdh-main-ul">
+                    <import src="../../templates/hospital-near-list/hospital-near-list.wxml" />
+                    <block wx:for="{{markers}}" wx:key="{{index}}">
+                        <template is="hospitalList" data="{{...item}}"></template>
+                    </block>
+                </view>
+            </view>
+            <view wx:else>
+                <import src="../../templates/plain/plain.wxml" />
+                <template is="plain"></template>
+            </view>
+        </view>
+    </view>
+</view>

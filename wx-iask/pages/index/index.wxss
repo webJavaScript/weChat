@@ -1,0 +1,103 @@
+/*引入模块css文件*/
+@import "../../templates/quick-link/quick-link.wxss";
+@import "../../templates/hot-list/hot-list.wxss";
+
+
+.swipe-wrap {
+    background: #ffffff;
+    overflow: hidden;
+}
+swiper {
+    height: 300rpx;
+}
+swiper-item {
+    height: 100%;
+}
+.slide-image {
+    width: 100%;
+    height: 100%;
+}
+.hot-wrap{
+	background: #fff;
+}
+.hot-head{
+    padding: 0 30rpx;
+    line-height: 87rpx;
+    border-bottom: 1rpx solid #e1e1e1;
+}
+.hot-head-title{
+    font-size: 30rpx;
+    color: #333;
+}
+.hot-head-more{
+    margin-right: -30rpx;
+    padding: 0 30rpx;
+    font-size: 26rpx;
+    color: #999999;
+}
+
+.icon-arrow-right{
+    width: 11rpx;
+    height: 20rpx;
+    margin: 35rpx 0 0 15rpx;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAUCAYAAABbLMdoAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0NENzRFRUY2MkQ5MTFFNzg1Q0JEODcwNzlGMDVDRDYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0NENzRFRjA2MkQ5MTFFNzg1Q0JEODcwNzlGMDVDRDYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3Q0Q3NEVFRDYyRDkxMUU3ODVDQkQ4NzA3OUYwNUNENiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3Q0Q3NEVFRTYyRDkxMUU3ODVDQkQ4NzA3OUYwNUNENiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtM0w34AAAC8SURBVHjahJE7CkIxEEXzptENPHUH/rFzAWKny9UqaGFrJ/434G8FVnoHJhBCMjNwyCvOIXlJ5b3fOecaYAk+ThkCTTAFHtSWvABHMLECkq1n4GQFJGsIzlpA0ffbCiiJXxJccgFljhaCaxpQ4cefEtzigJRrfUhwl2ClyTw/gafS5A7Ygi448OORIfZEnPNb5OS2iP1YzN1GqySmci3iICfGchCHJTHILG7ASBODvAZjSwzyF+wtkecvwAC96jhby+yokQAAAABJRU5ErkJggg==) no-repeat;
+    background-size: contain;
+}
+
+/* online-doctor.css
+ * -----------------------------------------------------------------*/
+.online-doctor-box {
+    background: #fff;
+    overflow: hidden;
+}
+.online-doctor-items {
+    width: 100%;
+    /*display: flex;*/
+    padding: 30rpx 0;
+    white-space:  nowrap;
+}
+.online-doctor-item {
+    display: inline-block;
+    margin-right: 10rpx;
+}
+.online-doctor-item:last-of-type {
+    margin-right: 0;
+}
+
+.online-doctor-item-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300rpx;
+    box-sizing: border-box;
+    padding: 30rpx;
+    background-color: #fafafa;
+}
+.online-doctor-avatar {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.online-doctor-avatar-src {
+    width: 100%;
+    height: 100%;
+}
+.online-doctor-info-box {
+    /*text-align: right;*/
+    width: 120rpx;
+    text-align: right;
+}
+.online-doctor-name {
+    line-height: 54rpx;
+    font-size: 34rpx;
+}
+.online-doctor-dept {
+    font-size: 24rpx;
+    line-height: 34rpx;
+    height: 34rpx;
+    color: #999999;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+

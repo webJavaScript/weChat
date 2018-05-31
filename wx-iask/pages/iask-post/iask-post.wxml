@@ -1,0 +1,72 @@
+<view class="iask-post-tips">现在提问，10分钟内即可得到多名专家免费解答</view>
+
+<form bindsubmit="iaskPost">
+    <view class="iask-post-fields">
+        <view class="iask-post-field iask-post-doctor" wx:if="{{doc.uid}}">
+            <image class="iask-post-doctor-avatar" mode="aspectFit" src="{{doc.default_avatar}}"></image>
+            <view class="m-l flx-1">
+                <view>
+                    <text class="fz-lg">{{doc.frontend_nickname}}</text>
+                    <text class="fz m-l-xs col-666">{{doc.position}}</text>
+                </view>
+                <view class="iask-post-doctor-tag m-t-xs fz-xss">已帮助{{doc.answers}}人</view>
+            </view>
+        </view>
+
+        <view class="iask-post-field">
+            <textarea placeholder="请详细描述主要病症、发病时间、过往病史等信息 (需要填写20个字以上）" placeholder-style="color: #999;" name="content"
+                      bindinput="bindContentConfirm" bindconfirm="bindContentConfirm"/>
+        </view>
+
+        <view class="iask-post-field iask-post-field-flex">
+            <view class="iask-post-field-label">性别</view>
+            <view class="iask-post-field-input">
+                <radio-group class="iask-post-radio-group" name="sex">
+                    <label class="radio" wx:for="{{items}}" wx:key="index">
+                        <radio value="{{item.name}}" color="#6595ff" checked="{{item.checked}}"/>
+                        {{item.value}}
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+
+        <view class="iask-post-field iask-post-field-flex">
+            <view class="iask-post-field-label">出生年份</view>
+            <view class="iask-post-field-input iask-post-field-picker">
+                <picker name="age" mode="date" value="{{date}}" bindchange="bindDateChange" start="{{dateStart}}"
+                        end="{{dateEnd}}">
+                    <view class="iask-post-field--picker">{{date}}</view>
+                    <image class="iask-post-field-arrow" mode="aspectFit"
+                           src="/assets/images/liebiaojinru@2x.png"></image>
+                </picker>
+            </view>
+        </view>
+
+        <view class="iask-post-field iask-post-field-flex iask-post-field--upload">
+            <view class="iask-post-images">
+                <view class="iask-post-image" wx:for="{{uploadImages}}" wx:key="index">
+                    <view class="iask-post-image-box">
+                        <view class="iask-post-upload">
+                            <image src="{{item.wxPic}}" mode="aspectFill"></image>
+                            <view class="iask-post-btn--del" bindtap="bindDelUploadImages" data-src="{{item.src}}" data-pic=""></view>
+                        </view>
+                    </view>
+                </view>
+
+                <view class="iask-post-image" bindtap="bindUpload">
+                    <view class="iask-post-image-box">
+                        <view class="iask-post-upload">
+                            <view class="iask-post-upload-box">
+                                <i class="icon-iask-post-upload"></i>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+            <view class="iask-post-field-input" wx:if="{{!isFirstUploadSuccess}}">上传疾病相关照片</view>
+        </view>
+    </view>
+
+    <button class="m-t-lg m-l-lg m-r-lg iask-post-btn" plain="true" formType="submit" disabled="{{postEnabled}}">提交问题</button>
+</form>

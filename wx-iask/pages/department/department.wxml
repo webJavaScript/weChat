@@ -1,0 +1,42 @@
+<view class="department">
+    <view class="department-select-wrap" wx:if="{{select.title.length}}">
+        <view class="department-select-title {{select.isShow?'department-select-title-cur':''}}" bindtap="selectNav">
+            <view class="department-st-word">{{select.title}}</view>
+            <view class="department-st-arrow"></view>
+        </view>
+        <scroll-view scroll-y class="department-select-main" wx:if="{{select.isShow}}">
+            <view class="department-select-ls {{item.check?'department-select-ls-cur':''}}" data-id="{{item.id}}" bindtap="selectChild"
+                wx:for="{{select.nav}}">{{item.name}}</view>
+        </scroll-view>
+    </view>
+    <view class="department-select-child-wrap">
+        <view class="department-select-child-ul clearfix">
+            <view class="department-select-child-ls {{item.check?'department-select-child-ls-cur':''}} fl" wx:for="{{select.child}}"
+                bindtap="selectGradeson" data-id="{{index}}">
+                {{item.name}}
+            </view>
+        </view>
+    </view>
+    <view class="department-bg" wx:if="{{select.isShow}}"></view>
+
+
+    <view wx:if="{{!isPlain}}">
+        <view class="department-list">
+            <import src="../../templates/uc-iask-list/uc-iask-list.wxml" />
+            <block wx:for="{{questions}}">
+                <template is="uc-iask-list" data="{{...item}}"></template>
+            </block>
+        </view>
+
+        <import src="../../templates/loading/loading.wxml" />
+        <template is="loading" wx:if="{{isLoading}}"></template>
+
+    </view>
+    <view wx:else>
+        <import src="../../templates/plain/plain.wxml" />
+        <template is="plain"></template>
+    </view>
+
+
+
+</view>

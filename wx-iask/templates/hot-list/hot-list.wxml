@@ -1,0 +1,28 @@
+<template name="hot-list">
+    <navigator class="hot-list" url="/pages/question-detail/question-detail?qid={{item.qid}}">
+        <view class="hot-list-top clearfix">
+            <view class="hot-list-imgwrap fl">
+                <view class="hot-list-imgbox image-pre">
+                    <image mode="widthFix" src="{{item.avatar}}"></image>
+                </view>
+                <!--<view class="icon icon-vip"></view>-->
+            </view>
+            <view class="hot-list-info">
+                <view class="hot-li-top clearfix">
+                    <text class="hot-lit-name fl">{{item.frontend_nickname}}</text>
+                    <view class="hot-lit-time fr">{{item.time}}</view>
+                </view>
+                <view class="hot-li-bottom">回答了<span class="hot-li-bottom-hl">{{item.categoryname}}</span>的问题</view>
+            </view>
+        </view>
+        <view class="hot-list-middle">
+            问：{{item.title}}
+        </view>
+        <view class="hot-list-bottom clearfix">
+            <view  class="fl hot-lb-left">免费看答案</view>
+            <view class="fr hot-lb-right">{{item.answers}}个回答 / {{item.visit}}人看过</view>
+        </view>
+
+    </navigator>
+
+</template>

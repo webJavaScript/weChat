@@ -1,0 +1,6 @@
+<template name="plain">
+    <view>
+        <view class="plain-img"></view>
+        <view class="plain-word">没有相关内容</view>
+    </view>
+</template>

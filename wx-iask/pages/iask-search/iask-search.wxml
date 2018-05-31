@@ -1,0 +1,29 @@
+<view class="search">
+    <view class="search-header">
+        <view class="header-search">
+            <view class="header-search-btn" type="button">
+                <image src="/assets/images/ico-search-active.png" mode="widthFix" class="icon-search"></image>
+            </view>
+            <input type="text" class="header-search-field" placeholder="搜医院、医生和疾病"
+                   value="{{value}}" confirm-type="search" bindconfirm="getData" bindinput="bindInput"/>
+
+            <view class="search-clear"  bindtap="bindClearInput" wx:if="{{value}}"></view>
+        </view>
+
+        <button bindtap="bindBack" class="header-btn-right" plain>取消</button>
+    </view>
+</view>
+
+<view class="hot-department">
+    <view class="hot-department-title">历史搜索</view>
+    <view class="hot-department-main clearfix" wx:if="{{historyList.length}}">
+        <navigator class="hot-department-ls fl"  open-type="redirect" url="/pages/iask-search-result/iask-search-result?keyword={{item}}"
+                   wx:for="{{historyList}}" wx:key="{{index}}">
+            {{item}}
+        </navigator>
+    </view>
+</view>
+
+<button wx:if="{{historyList.length}}" class="btn-plain m-t" plain bindtap="bindClearHistory">清除历史搜索</button>
+
+<view wx:else class="btn-plain m-t">暂无历史搜索</view>

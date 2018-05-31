@@ -1,0 +1,5 @@
+<template name="cmTable">
+    <view class="uc-favo-links uc-favo-links--{{value}}">
+        <view bindtap="changeTab" class="uc-favo-link {{item.value == value ? 'active': ''}}" wx:for="{{ucFavoTabs}}" wx:key="{{index}}" data-value="{{item.value}}">{{item.name}}</view>
+    </view>
+</template>

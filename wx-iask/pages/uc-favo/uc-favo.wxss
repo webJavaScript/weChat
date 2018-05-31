@@ -1,0 +1,11 @@
+@import "../../templates/doctor-list/doctor-list.wxss";
+@import "../../templates/uc-iask-list/uc-iask-list.wxss";
+@import "../../templates/cm-table/cm-table.wxss";
+
+
+.uc-favo-count {
+    line-height: 90rpx;
+    font-size: 28rpx;
+    color: #666666;
+    margin: 0 30rpx;
+}

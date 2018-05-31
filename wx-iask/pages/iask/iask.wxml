@@ -1,0 +1,37 @@
+<view class="col-search">
+    <image class="col-search-img" src="/assets/images/pic-bg-search.png" alt=""></image>
+    <view class="col-search-main">
+        <view class="col-search-txt">共收录
+            <text class="col-search-txt-num">{{askNums}}</text>
+            个问题
+        </view>
+
+        <navigator class="col-search-box" url="/pages/iask-search/iask-search">
+            <view class="search-enter">
+                <view class="search-center-block">
+                    <view class="icon-search">
+                        <image src="/assets/images/ico-search.png" mode="widthFix" alt=""></image>
+                    </view>
+                    <text class="search-center-text">请输入疾病/症状找问题</text>
+                </view>
+            </view>
+
+            <view class="search-link" plain>搜 索</view>
+        </navigator>
+    </view>
+</view>
+
+<view class="iask-link-items-box m-t">
+    <view class="iask-link-items">
+        <navigator url="{{item.id == -1 ? '/pages/iask/iask' : '/pages/department/department?dept_id=' + item.id}}" data-id="{{item.id}}" class="iask-link-item {{item.id == -1 && 'iask-link-item-null'}}" wx:for="{{categoryList}}" wx:key="index">
+
+            <view class="iask-link-item-box">
+                <view class="iask-link-icon">
+                    <image wx:if="{{department[item.id]}}" src="/assets/images/department/{{department[item.id]}}" mode="widthFix"></image>
+                </view>
+                <text class="iask-link-item-text">{{item.name}}</text>
+            </view>
+
+        </navigator>
+    </view>
+</view>

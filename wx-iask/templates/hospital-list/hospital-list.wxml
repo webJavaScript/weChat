@@ -1,0 +1,31 @@
+<template name="hospitalList">
+    <navigator class="hos-ls" url="../../pages/find-doctor-hashospital/find-doctor-hashospital?hosId={{id}}&hosTitle={{name}}">
+        <view class="hos-ls-imgwrap image-pre">
+            <image mode="widthFix"
+                   src="{{thumb}}"></image>
+        </view>
+        <view class="hos-ls-right">
+            <view class="hos-lr-title">
+                <view class="hos-lr-title-txt">
+                    <view class="line-clamp-1">
+                      {{name}}
+                    </view>
+                </view>
+                <view class="hos-lr-distance" wx:if="{{znashimeiyou}}">距您300m</view>
+            </view>
+            <view class="hos-lr-tagwrap">
+                <view class="hos-lr-tag tag-orange" wx:if="{{level}}">{{level}}</view>
+                <view class="hos-lr-tag tag-green" wx:if="{{insurance == 1}}">医保</view>
+                <view class="hos-lr-tag tag-red">{{type}}</view>
+            </view>
+            <view class="hos-lr-address">
+                <view class="icon icon-hos-address"></view>
+                <view class="hos-lra-text">
+                    <view class="line-clamp-1">
+                        {{address}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </navigator>
+</template>

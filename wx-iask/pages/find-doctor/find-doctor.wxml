@@ -1,0 +1,23 @@
+<view class="fd-wrap mt-20 mb-20">
+    <navigator class="fd-ls" open-type="redirect"  url="/pages/find-doctor-hospital/find-doctor-hospital">
+        <view class="icon icon-fd-hospital"></view>
+        <view class="fd-ls-right">
+            <view class="fd-lr-title">按医院找</view>
+            <view class="fd-lr-info">按医院找医生</view>
+        </view>
+    </navigator>
+    <navigator class="fd-ls" url="/pages/find-doctor-department/find-doctor-department">
+        <view class="icon icon-fd-department"></view>
+        <view class="fd-ls-right">
+            <view class="fd-lr-title">按科室找</view>
+            <view class="fd-lr-info">按科室找医生</view>
+        </view>
+    </navigator>
+</view>
+
+<view class="hot-department">
+    <view class="hot-department-title">热门科室</view>
+    <view class="hot-department-main clearfix">
+        <navigator class="hot-department-ls fl" url="../find-doctor-department/find-doctor-department?id={{item.id}}" wx:for="{{hot}}" wx:key="{{index}}">{{item.name}}</navigator>
+    </view>
+</view>

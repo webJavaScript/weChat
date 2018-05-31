@@ -1,0 +1,30 @@
+<template name="quick-link">
+    <view class="qLink-wrap">
+        <navigator class="qLink-item qLink-item-ask" url="/pages/iask-post/iask-post">
+            <view class="qLink-item-txt-box">
+                <view class="qLink-ask">免费提问</view>
+                <view class="qLink-ask-info">专业医生 在线坐诊</view>
+                <view class="qLink-ask-10">10分钟内解答</view>
+            </view>
+        </navigator>
+        <view class="qLink-item">
+            <view class="qLink-item-r-items">
+                <navigator url="/pages/find-doctor/find-doctor" class="qLink-item-r-item">
+                    <view class="qLink-item-r-text">
+                        <text>找医生</text>
+                        <text>全国名医 对症咨询</text>
+                    </view>
+                    <i class="icon-qLink-item-r icon-qLink-item-r-doc"></i>
+                </navigator>
+                <navigator class="qLink-item-r-item" url="/pages/find-nearby/find-nearby">
+                    <view class="qLink-item-r-text">
+                        <text>附近医疗</text>
+                        <text>医院/药店精准定位</text>
+                    </view>
+                    <i class="icon-qLink-item-r icon-qLink-item-r-hos"></i>
+                </navigator>
+            </view>
+        </view>
+    </view>
+
+</template>

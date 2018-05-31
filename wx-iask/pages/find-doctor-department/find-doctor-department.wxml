@@ -1,0 +1,22 @@
+<view class="fdh-wrap">
+    <import src="../../templates/cm-select/cm-select.wxml" />
+    <template is="cmSelect" data="{{...select}}"></template>
+    <view class="fdh" wx:if="{{total}}">
+        <view class="fdh-title" wx:if="{{docList.length != 0}}">共{{total}}位医生</view>
+        <view class="fdh-main-ul">
+            <import src="../../templates/doctor-list/doctor-list.wxml" />
+            <block wx:for="{{docList}}" wx:key="{{index}}">
+                <template is="doctorList" data="{{...item}}"></template>
+            </block>
+
+        </view>
+    </view>
+    <view wx:else>
+        <import src="../../templates/plain/plain.wxml" />
+        <template is="plain"></template>
+    </view>
+
+    <import src="../../templates/loading/loading.wxml" />
+    <template is="loading" wx:if="{{isLoading}}"></template>
+
+</view>

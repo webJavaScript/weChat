@@ -1,0 +1,20 @@
+<template name="hospitalList">
+    <navigator class="hos-ls" url="../../pages/map/map?title={{title}}&address={{address}}&latitude={{latitude}}&longitude={{longitude}}">
+        
+        <view class="hos-ls-right">
+            <view class="hos-lr-title">
+                <view class="hos-lr-title-txt">
+                    <view class="line-clamp-1">{{title}}</view>
+                </view>
+                <view class="hos-lr-distance" >{{dis}}km</view>
+            </view>
+            
+            <view class="hos-lr-address">
+                <view class="icon icon-hos-address"></view>
+                <view class="hos-lra-text">
+                    <view class="line-clamp-1">{{address}}</view>
+                </view>
+            </view>
+        </view>
+    </navigator>
+</template>

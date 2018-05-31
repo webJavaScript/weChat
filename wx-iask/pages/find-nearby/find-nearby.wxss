@@ -1,0 +1,16 @@
+/*引入模块css文件*/
+@import "../../templates/hospital-near-list/hospital-near-list.wxss";
+@import "../../templates/cm-table/cm-table.wxss";
+@import "../../templates/plain/plain.wxss";
+
+.fdh{
+    padding-top: 0;
+}
+.uc-favo-links{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+

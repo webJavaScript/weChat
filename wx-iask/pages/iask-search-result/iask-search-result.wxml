@@ -1,0 +1,22 @@
+<view class="department">
+
+    <view wx:if="{{!isPlain}}">
+        <view class="department-list">
+            <import src="../../templates/uc-iask-list/uc-iask-list.wxml" />
+            <block wx:for="{{questions}}">
+                <template is="uc-iask-list" data="{{...item}}"></template>
+            </block>
+        </view>
+
+        <import src="../../templates/loading/loading.wxml" />
+        <template is="loading" wx:if="{{isLoading}}"></template>
+
+    </view>
+    <view wx:else>
+        <import src="../../templates/plain/plain.wxml" />
+        <template is="plain"></template>
+    </view>
+
+
+
+</view>

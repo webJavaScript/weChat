@@ -1,0 +1,40 @@
+@import "../../wxParse/wxParse.wxss";
+page {
+    background-color: #ffffff;
+}
+.details-wrap {
+    padding: 30rpx;
+    padding-top: 0;
+    overflow: hidden;
+}
+.details-title-box {
+    padding: 35rpx 0;
+    /*margin-bottom: 30rpx;*/
+    border-bottom: 1px solid #eee;
+}
+.details-title {
+    font-size: 40rpx;
+    line-height: 50rpx;
+    color: #000;
+    font-weight: bold;
+}
+.details-info {
+    padding-top: 24rpx;
+    font-size: 24rpx;
+    color: #999;
+    line-height: 1;
+}
+.details-time {
+    margin-right: 0.35rem;
+}
+.details-content {
+    line-height: 1.8;
+    font-size: 34rpx;
+}
+.details-content .wxParse-div {
+    /*overflow: hidden;*/
+}
+.details-content .wxParse-p, .details-content .wxParse-center {
+    margin: 20rpx 0;
+    overflow: hidden;
+}

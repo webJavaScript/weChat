@@ -1,0 +1,48 @@
+<!--uc.wxml-->
+<view class="view-uc-bg" wx:if="{{userInfo}}">
+    <view class="uc-avatar image-pre">
+        <image src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+    </view>
+    <view class="uc-avatar-name">{{userInfo.nickName}}</view>
+</view>
+
+<view class="view-uc-bg" wx:else>
+    <view class="uc-avatar">
+        <image src="/assets/images/wodetouxiang@2x.png" mode="aspectFit"></image>
+    </view>
+    <view class="uc-avatar-name" bindtap="bindLogin">点击登录</view>
+</view>
+
+<view class="uc-link-items" wx:for="{{ucLinks}}" wx:key="{{index}}">
+    <block wx:for="{{item.children}}" wx:key="{{index}}">
+        <navigator wx:if="{{!item.buttonEnabled}}" url="{{item.path}}" class="uc-link-item">
+            <view class="uc-link-icon">
+                <image src="{{item.icon}}" mode="withd"></image>
+            </view>
+            <view class="uc-link-text">{{item.name}}</view>
+            <view class="uc-link-arrow">
+                <image src="../../assets/images/liebiaojinru@2x.png" mode="aspectFit"></image>
+            </view>
+        </navigator>
+
+        <button open-type="share" bindtap="bindShare" wx:else class="uc-link-item">
+            <view class="uc-link-icon">
+                <image src="{{item.icon}}" mode="withd"></image>
+            </view>
+            <view class="uc-link-text">{{item.name}}</view>
+            <view class="uc-link-arrow">
+                <image src="../../assets/images/liebiaojinru@2x.png" mode="aspectFit"></image>
+            </view>
+        </button>
+    </block>
+
+    <view class="uc-link-item" wx:if="{{item.name == '2'}}">
+        <view class="uc-link-icon">
+            <image src="../../assets/images/banbenhao@2x.png" mode="withd"></image>
+        </view>
+        <view class="uc-link-text">版本号：{{version}}</view>
+        <view class="uc-link-desc">
+            {{versionDesc}}
+        </view>
+    </view>
+</view>

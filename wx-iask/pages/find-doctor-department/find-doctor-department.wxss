@@ -1,0 +1,10 @@
+/*引入模块css文件*/
+@import "../../templates/doctor-list/doctor-list.wxss";
+@import "../../templates/cm-select/cm-select.wxss";
+@import "../../templates/plain/plain.wxss";
+
+
+
+
+
+

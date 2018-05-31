@@ -1,0 +1,73 @@
+<view wx:if="{{doctor}}">
+    <view class="doctor-info-box">
+        <view class="doctor-avatar-box">
+            <view class="doctor-avatar image-pre">
+                <image src="{{doctor.default_avatar}}" mode="aspectFit"/>
+            </view>
+        </view>
+
+        <view class="doctor-fans">粉丝：{{doctor.fans}}</view>
+
+        <view class="mt">
+            <text class="fz-lgx col-fff">{{doctor.frontend_nickname}}</text>
+            <text class="fz-xs m-l col-fff">{{doctor.position}}</text>
+        </view>
+
+        <view class="col-fff fz-xs m-t">
+            {{doctor.hospital_name}} / {{doctor.cid_name}}
+        </view>
+
+        <view class="doctor-btn-fork m-t doctor-btn-fork--{{type}}" data-doctorid="{{doctor.uid}}" data-type="{{type}}"
+              bindtap="bindFollow">{{btnText}}
+        </view>
+    </view>
+
+    <view class="doctor-skill-items {{isExpand ? 'doctor-skill-items--expand' : ''}}">
+        <view class="doctor-skill-item">
+            <view class="doctor-skill-title">擅长</view>
+            <view class="doctor-skill-content {{isExpand ? 'doctor-skill-content--expand' : ''}}">{{doctor.goodable}}
+            </view>
+        </view>
+
+        <view class="doctor-skill-item">
+            <view class="doctor-skill-title">介绍</view>
+            <view class="doctor-skill-content {{isExpand ? 'doctor-skill-content--expand' : ''}}">{{doctor.introduce}}
+            </view>
+        </view>
+    </view>
+
+    <view class="doctor-expand-btn" wx:if="{{!isExpand}}" bindtap="bindExpand">
+        <view class="doctor-expand-txt">展开</view>
+        <view class="doctor-expand-arrow"></view>
+    </view>
+
+    <view wx:if="{{!hideQuestionList && answerTotal != 0}}">
+
+        <import src="../../templates/uc-iask-list/uc-iask-list.wxml"/>
+
+        <view class="col-title mt-20">
+            <view class="col-title-h">回答
+                <view class="col-title-desc">（共{{answerTotal}}条）</view>
+            </view>
+        </view>
+        <view class="uc-iask-items bg-white">
+            <block wx:for="{{answer}}" wx:key="{{index}}">
+                <template is="uc-iask-list" data="{{...item}}"></template>
+            </block>
+        </view>
+
+        <navigator wx:if="{{answerTotal > 2}}" class="btn-more m-t" url="/pages/doctor-iask/doctor-iask?uid={{uid}}" open-type="redirect">
+            <view class="btn-more-txt">
+                查看更多
+            </view>
+            <view class="btn-more-arrow">
+                <image src="/assets/images/liebiaojinru@2x.png"/>
+            </view>
+        </navigator>
+    </view>
+
+    <view class="doctor-fixed-ph"></view>
+    <view class="doctor-fixed">
+        <navigator url="/pages/iask-post/iask-post?uid={{uid}}" class="doctor-iask-btn">向TA提问</navigator>
+    </view>
+</view>

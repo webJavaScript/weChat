@@ -1,0 +1,64 @@
+<view class="swipe-wrap mb-20">
+    <swiper indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+            indicator-active-color="{{indicatorActiveColor}}" indicator-color="{{indicatorColor}}"
+            circular="{{circular}}">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item bindtap="bindToSwiperDetail" data-weixinisurl="{{item.weixinIsUrl}}" data-articleid="{{item.articleId}}" data-title="{{item.title}}" class="image-pre">
+                <image src="{{item.litpic}}" class="slide-image" mode="aspectFill" height="300"/>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<view class="m-space mb-20">
+    <import src="../../templates/quick-link/quick-link.wxml"/>
+    <template is="quick-link"></template>
+</view>
+
+<view class="online-doctor-box">
+    <view class="hot-head clearfix">
+        <view class="hot-head-title fl">在线医生</view>
+        <navigator url="/pages/find-doctor/find-doctor" class="hot-head-more fr clearfix">
+            <view class="hot-hm-text fl">更多</view>
+            <view class="icon icon-arrow-right fl"></view>
+        </navigator>
+    </view>
+
+    <scroll-view scroll-x class="online-doctor-items" wx:if="{{onlineDoctors.length}}">
+        <navigator url="/pages/doctor/doctor?uid={{item.uid}}" class="online-doctor-item" wx:for="{{onlineDoctors}}">
+            <view class="online-doctor-item-box">
+                <view class="online-doctor-avatar image-pre">
+                    <image class="online-doctor-avatar-src" src="{{item.himg}}"
+                           mode="widthFix"></image>
+                </view>
+                <view class="online-doctor-info-box">
+                    <view class="online-doctor-name">{{item.name}}</view>
+                    <view class="online-doctor-dept">{{item.cid ? item.cid : ''}}</view>
+                </view>
+            </view>
+        </navigator>
+    </scroll-view>
+    <view class="null" wx:else>
+        没有相关内容
+    </view>
+</view>
+
+<view class="hot-wrap m-t">
+    <view class="hot-head clearfix">
+        <view class="hot-head-title fl">热门问题</view>
+        <navigator open-type="switchTab" url="/pages/iask/iask" class="hot-head-more fr clearfix">
+            <view class="hot-hm-text fl">更多</view>
+            <view class="icon icon-arrow-right fl"></view>
+        </navigator>
+    </view>
+    <view class="hot-main">
+        <import src="../../templates/hot-list/hot-list.wxml"/>
+        <block wx:for="{{laterQuestion}}" wx:key="{{index}}">
+            <template is="hot-list" data="{{item}}"></template>
+        </block>
+    </view>
+
+    <import src="/templates/plain/plain.wxml"/>
+    <template is="plain" wx:if="{{isPlain}}"></template>
+</view>

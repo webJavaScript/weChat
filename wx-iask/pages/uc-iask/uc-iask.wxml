@@ -1,0 +1,14 @@
+<import src="../../templates/uc-iask-list/uc-iask-list.wxml"/>
+
+<view class="uc-iask-items">
+    <block wx:for="{{items}}" wx:key="index">
+        <template is="uc-iask-list" data="{{...item}}"></template>
+    </block>
+</view>
+
+<import src="/templates/plain/plain.wxml"/>
+<template is="plain" wx:if="{{plain}}"></template>
+
+<import src="/templates/loading/loading.wxml" />
+<template is="loading" wx:if="{{loading}}"></template>
+

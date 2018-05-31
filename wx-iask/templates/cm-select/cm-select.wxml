@@ -1,0 +1,26 @@
+<template name="cmSelect">
+    <view class="cm-select-bg" wx:if="{{isShow}}"></view>
+    <view class="cm-select-wrap">
+        <view class="cm-select">
+            <view class="cm-select-ls  {{list.check? 'cm-select-ls-cur':''}}" bindtap="selectNav" id="{{i}}" wx:for="{{nav}}" wx:key="{{index}}" wx:for-index="i" wx:for-item="list">
+                <view class="cm-sl-title">{{list.title}}</view>
+                <view class="cm-sl-arrow"></view>
+            </view>
+        </view>
+        <view class="cm-select-son" wx:if="{{isShow}}">
+            <view class="cm-ss-ls" wx:for="{{nav}}" wx:key="{{index}}" wx:if="{{list.check}}"  wx:for-index="i" wx:for-item="list" >
+                <scroll-view scroll-y class="cm-ssl-ul {{list.children[0].gradeson?'cm-ssl-ul-first':''}}" >
+                    <view class="cm-ssl-ls {{ls.check?'cm-ssl-ls-cur':''}}" bindtap="selectChild" id="{{soni}}" wx:for="{{list.children}}" wx:key="{{index}}" wx:for-index="soni" wx:for-item="ls">{{ls.title}}</view>
+                </scroll-view>
+                <block wx:for="{{list.children}}" wx:key="{{index}}" wx:for-index="soni" wx:for-item="ls" wx:if="{{ls.check && ls.gradeson}}">
+                    <scroll-view scroll-y class="cm-ssl-ul">
+                        <view  class="cm-ssl-ls {{item.check?'cm-ssl-ls-cur':''}}" id="{{index}}" wx:for="{{ls.gradeson}}" bindtap="selectGradeson">{{item.title}}</view>
+                    </scroll-view> 
+                </block>
+    
+            </view>
+            
+                    
+        </view>
+    </view>
+</template>

@@ -1,0 +1,15 @@
+<view class="map-wrap">
+
+    <map id="map" class="map" iconPath="../../assets/images/Q.png" markers="{{markers}}" longitude="{{info.longitude}}" title="{{title}}" latitude="{{info.latitude}}"></map>
+    <view class="map-info">
+        <view class="map-info-wrap clearfix mb-20">
+            <view class="icon icon-address fl"></view>
+            <view class="map-info-name fl">{{info.title}}</view>
+        </view>
+        <view class="map-info-wrap clearfix">
+            <view class="icon icon-addressinfo fl"></view>
+            <view class="map-info-address fl">{{info.address}}</view>
+        </view>
+    </view>
+</view>
+

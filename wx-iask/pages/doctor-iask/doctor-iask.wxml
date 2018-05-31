@@ -1,0 +1,10 @@
+<import src="/templates/uc-iask-list/uc-iask-list.wxml"/>
+
+<view class="uc-iask-items bg-white">
+    <block wx:for="{{answer}}" wx:key="{{index}}">
+        <template is="uc-iask-list" data="{{...item}}"></template>
+    </block>
+</view>
+
+<import src="/templates/loading/loading.wxml" />
+<template is="loading" wx:if="{{loading}}"></template>

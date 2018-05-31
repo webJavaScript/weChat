@@ -1,0 +1,80 @@
+.uc-iask-item {
+    padding: 30rpx 30rpx 30rpx 30rpx;
+    border-bottom: 1px solid #e1e1e1;
+}
+.uc-iask-title, .uc-iask-anw {
+    display: flex;
+    position: relative;
+    margin-top: 10rpx;
+}
+.icon-uc-iask-q, .icon-uc-iask-a {
+    position: relative;
+    display: block;
+    width: 42rpx;
+    height: 50rpx;
+    margin-right: 20rpx;
+}
+.uc-iask-title:after {
+    content: '';
+    position: absolute;
+    left: 21rpx;
+    top: 48rpx;
+    width: 1rpx;
+    height: 100%;
+    overflow: hidden;
+    background-color: #e1e1e1;
+}
+.icon-uc-iask-a {
+    margin-top: 8rpx;
+    background-color: #fff;
+}
+.icon-uc-iask-a:after {
+    content: '';
+    position: absolute;
+    width: 15rpx;
+    height: 15rpx;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3rpx solid #dddddd;
+    border-radius: 50%;
+}
+.icon-uc-iask-q {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAyCAYAAAAqRkmtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjIzQzJGNUZENjM4MTExRTdCN0Y2RDk3OUFFMDAzRjYzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjIzQzJGNUZFNjM4MTExRTdCN0Y2RDk3OUFFMDAzRjYzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjNDMkY1RkI2MzgxMTFFN0I3RjZEOTc5QUUwMDNGNjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjNDMkY1RkM2MzgxMTFFN0I3RjZEOTc5QUUwMDNGNjMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7MrO4zAAAEkElEQVR42tRZWWxMURg+U21JWxpLRUuJ3UOtragQDdLGEmvCgwflgYS+EYKESCtCaMRLxYtoBCFErRWNVuxRQ4JQEZXYytijSuzf3/Nfc01n5p5z7+mIP/kyd2bOvfc7//336/t1QJiSdKArkAJ8BxqBp8AHExeP93BuLjAFmAAMBjpEWPcSuAbUABXAIzc382lqNBlYBBQB/Vzc7xdwAdgGHOXvShKnsW4Ja2ObS5LNigHGAUeAm0CeSaI9gfNAGZAmzMlQNge6bjuvRMcDN4AxonXEx0/qCtDdLdHZQCXQWbS+DAMuRTOpSETJk/cDbUXspBebQg9VogPZ2BNF7IVIHgunoFCitOBAlJgYCxkOlDoF/BXsjXrSaTL0j6SUCHP++kb+9rYcx67JLgX2AZfDBXwKQ/dVQkWzkGEM2o2zQDKpa/g1DXDmBzuFeFHuhixFmxwrKdiJlnGoUNNg3iEhEpLk929NyOj1wf+JuJ384yohrha4ITsNOGEn2h54QbfQItkUEOIeNPZwXct1KUj/WTC1nvleyNZwBPpDdCGwS+lxT/0kSX5ANq3p42yHfYuFyF4rj+tgArcW6BD9CfSmbVpeP0vptBFnJEl61CokSUjbdWyjgwqlptWF+M2wDtpwoeCsTesx3irV82jSIm2OpM9y3cc/0SJKAT7VcXlmcfD4yTp9t3h8mmPLZN0zcyyiA5SWp+XKz9d33MXHZ8eCEUEv51Gx0p6IZigtT0pnon53IfytLZZ2KtQ9OyMuZunyq6ezU+LE/yHxRPRTTG7lrRb7SERfKy1tapCfXbIV+tMzMtD/ldEKw9urmryJ40LEWV5dZaJZ0bXTrVDGW8pGdrLdp/OGA7r2+pFabiJaxwOD6GKPnZnFkddRpeQvkcdDlsvaoHk8MZYrqou62vRbcZRSRq2S11JhYRFIVEiblG6pgCFTsKqp++t1iVbbK/wKtQqxQKZCIjC+PjpZSpu0MVprpV4i33hbl+hpO9G9XKk4a9XPlVAqipqClyCxLELkQ/GRkGJzxoBu5STYf2pDC+fD3CI7CznM6LLIhXNCstxIC2srCV+7Rm9JdoQSzWb2Pq1WpO+cIOFIrQj1UrmlckNVuaqP/zlVs8CXcEMyCnDzXTd3HbHXd/6g94fGVrJVKmqqlWpS4rEn0jSPXPOO4RlT8AmQA9YWIeBXOq0+C+Tbp33hxo6TgFPKJmBeAjziaXCalFA4WPOPSFJMnxlKMtrsaRMjlkJOM5cne1rTvNXASqExFfYgNOenXHtSd5pnyRa22VetSPI69bfAOad21EkQV0QWhy6T2qW3JquEHBLXq/TNqp64gJMCqgzxw0sRDGwF+gObVZsUn8v3TIN52palcQ6lo4PAdiarJW57JrrpKCEHvk5C9S4NnYYAG9yQ9ELUinlzHGZWVEuOBKq8GrTXLpRsdTFwPMx/17gaazTheSbaZSK7kB3Oks/APGHoPagpos1dImCvoDdSQ2Iy2PoMvl2mTd/lWVEm8N7oBMLgtX5yyMowTdI0URLqhdu0ykzH8PXqQ5zKmPwWYABj9SoCpdkqLwAAAABJRU5ErkJggg==);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.uc-iask-title-txt, .uc-iask-anw-txt {
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 52rpx;
+    font-size: 34rpx;
+    margin-top: -8rpx;
+}
+.uc-iask-anw-txt {
+    font-size: 28rpx;
+}
+.uc-iask-anw-uname {
+    margin-right: -8rpx;
+    color: #6595ff;
+}
+.uc-iask-info {
+    display: flex;
+    margin-left: 62rpx;
+    margin-top: 28rpx;
+    font-size: 24rpx;
+    justify-content: space-between;
+}
+.uc-iask-time {
+    color: #999;
+}
+.uc-iask-num {
+    color: #45c25c;
+}
+.navigator-hover .icon-uc-iask-a {
+    background-color: #e6e6e6;
+}
