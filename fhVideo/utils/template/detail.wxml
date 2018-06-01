@@ -20,6 +20,9 @@
                 {{videoInfo.playtimes}}次
             </text>
         </view>
+        <button open-type="getUserInfo">
+             赞赏
+        </button>
         <button open-type="share" class="share-btn" plain>
             <image src="../../images/ico-share.png"></image>
             <text>分享</text>

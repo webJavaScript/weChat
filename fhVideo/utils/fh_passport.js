@@ -2,7 +2,7 @@
 // https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=4_3
 
 var config = require('../utils/config.js');
-var url = config["fh-config"]['requestUrl'];
+var url = 'https://passport.fh21.com.cn/miniapps/login' || config["fh-config"]['requestUrl'];
 var Promise = require('../vendor/es6-promise.js');
 
 var fhPay = {};
@@ -68,6 +68,7 @@ module.exports = {
         loginFH()
             .then(function (code) {
                 return getUserInfo({code});
+                // return [{}, code];
             })
             .then(function (res) {
                 let [userInfo,
