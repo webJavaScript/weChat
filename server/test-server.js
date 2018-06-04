@@ -1,9 +1,11 @@
 //依赖 connect
 
 var http = require('http')
+  , https = require('https')
   , express = require('express')
   , request = require('request')
-  , bodyParser = require('body-parser');
+  , bodyParser = require('body-parser')
+  , crypto = require('crypto');
 
 //允许传送隐藏文件
 var options = {hidden: true};
@@ -24,35 +26,71 @@ app.use(bodyParser.urlencoded({            //此项必须在 bodyParser.json 下
   extended: true
 }));
    
-app.get('/',(req, res, next) => {
+app.get('/', (req, res, next) => {
     console.log('someone request');
-    res.json({appid: '1234567890'})
+    res.json({appid: '1234567890'});
 });
 
 app.post('/video/login', (req, res, next) => {
-    console.log(req.params, req.query, req.body.code);
+    console.log(req.body.code, req.method);
     const appid = 'wxb24ece1d8fe0a938';
     const secret = '59c43353a9e8f0a19a5534bcb290ba1d';
     const code = req.body.code;
-    const jsons = getOpenid({appid, secret, code});
-    res.json(jsons);
-})
+    getOpenid({appid, secret, code}, (jsons) => {
+        console.log('getOpenid >> jsons: ', jsons);
+        var resJSON = JSON.parse(`{
+            "openid":null,
+            "appid":"video",
+            "logid":1923664258,
+            "errno":0,
+            "servertime":1528082701,
+            "errmsg":"success"
+        }`);
+        if(!jsons) {
+            res.send(500, {code: 0, error: 'something blew up' });
+        }
+        resJSON.logid = setLogid();
+        resJSON.servertime = (+new Date()).toString().slice(0, -3);
+        resJSON.openid = JSON.parse(jsons).openid || null;
+        res.send(resJSON);
+    });
+});
 
-function getOpenid(obj) {
+function setLogid() {
+    const codes = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz';
+    var str = '';
+    for(var i = 0; i < 32; i++){
+        var rd = parseInt(Math.random() * codes.length);
+        str += codes[rd];
+    }
+    return str;
+}
+
+function getOpenid(obj, cb) {
     if(!obj) return { code: 0, msg: '参数错误'};
     const { appid, secret, code } = obj;
     if(!appid) return { 'code': 0, 'msg': 'appid 错误' };
     if(!secret) return { 'code': 0, 'msg': 'secret 错误' };
     if(!code) return { 'code': 0, 'msg': 'code 错误' };
     var url = 'https://api.weixin.qq.com/sns/jscode2session?appid=' + appid + '&secret=' + secret + '&js_code=' + code + '&grant_type=authorization_code';
-    var options = {
-        headers: {"Connection": "close"},
-        url,
-        method: 'GET',
-        json:true
-    };
-    http.request(options, res => {
-        console.log('json2session: ', res);
-        return res;
+    console.log('url: ', url);
+    var jsons = {};
+    var req = https.get(url, (res) => {
+        console.log('STATUS:'+res.statusCode);  
+        res.setEncoding('utf-8');
+        res.on('data', chunk => {
+            console.log('chunk: ', chunk);
+            jsons = chunk;
+        });
+        res.on('end',() => {
+            console.log('响应结束********');
+            cb && cb(jsons);
+            return jsons;
+        });  
+    });
+    req.on('error', err => {
+        console.log('err: ', err);
+        cb && cb(err);
     })
+    req.end();
 }

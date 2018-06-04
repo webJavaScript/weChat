@@ -3,9 +3,12 @@
 
 var config = require('../utils/config.js');
 var url = 'https://passport.fh21.com.cn/miniapps/login' || config["fh-config"]['requestUrl'];
+url = 'http://192.168.10.200:6050/video/login';
 var Promise = require('../vendor/es6-promise.js');
+var key = "tBjuMyxiVmNA1tSOQa171JJ4aDoIVHA9";
 
 var fhPay = {};
+var payKey = key;
 var loginAction = function ({
     userInfo = {},
     params = {}
@@ -64,6 +67,7 @@ module.exports = {
     fhPay,
     loginFH,
     getUserInfo,
+    payKey,
     init(success = function () {}, fail = function () {}) {
         loginFH()
             .then(function (code) {

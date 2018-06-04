@@ -20,7 +20,7 @@
                 {{videoInfo.playtimes}}次
             </text>
         </view>
-        <button open-type="getUserInfo">
+        <button open-type="getUserInfo" bindtap="linkPay">
              赞赏
         </button>
         <button open-type="share" class="share-btn" plain>
