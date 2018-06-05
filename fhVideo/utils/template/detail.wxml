@@ -59,3 +59,18 @@
         </view>
     </view>
 </template>
+
+<!-- 赞赏 -->
+<template name="fh-pay-link">
+    <view class="fh-pay-link">
+        <view>飞华微视</view>
+        <view class="pay-btn-list">
+            <button bindtap="linkPayMent" data-pay-money="1">1元</button>
+            <button bindtap="linkPayMent" data-pay-money="2">2元</button>
+            <button bindtap="linkPayMent" data-pay-money="6">6元</button>
+            <button bindtap="linkPayMent" data-pay-money="8">8元</button>
+            <button bindtap="linkPayMent" data-pay-money="48">48元</button>
+            <button bindtap="linkPayMent" data-pay-money="98">98元</button>
+        </view>
+    </view>
+</template>

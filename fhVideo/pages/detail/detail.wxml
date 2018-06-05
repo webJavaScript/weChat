@@ -8,6 +8,7 @@
         <cover-view>回到</cover-view>
         <cover-view>首页</cover-view>
     </cover-view>
+    <template is="fh-pay-link" wx:if="{{showPayLink}}" />
     <view class="similarly-video" wx:if="{{!!videoList.length}}">
         <view class="similarly-title">
             <text>相关视频</text>

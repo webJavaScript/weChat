@@ -139,8 +139,15 @@ Page({
     })
   },
   linkPay: function() {
+    this.setData({
+      showPayLink: true
+    })
+  },
+  linkPayMent: function(ev){
+    var target = ev.target;
+    console.log('target: ', target);
     var authorize = wx.getStorageSync('authorize');
-    if(authorize){
+    if(authorize) {
       var appSalt = wx.getStorageSync('appSalt');
       if(appSalt.appid === 'video'){
         if(appSalt.openid) {
@@ -166,7 +173,14 @@ Page({
       }
     }
 
-    fh_passport.init();
-    this.linkPay();
+    fh_passport.init(() => {
+      this.linkPayMent(ev);
+      this.setData({
+        showPayLink: false
+      })
+    }, err => {
+      // 登录失败
+      
+    });
   }
 })
