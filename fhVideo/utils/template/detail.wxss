@@ -51,15 +51,35 @@
     padding: 0;
 }
 
-.fh-detail-share-btn .share-btn image {
+.fh-detail-share-btn .share-btn image,
+.fh-detail-share-btn .like-video image {
     width: 1em;
     height: 1em;
     display: block;
     margin: 0 auto;
 }
 
-.fh-detail-share-btn .share-btn text {
+.fh-detail-share-btn .share-btn text,
+.fh-detail-share-btn .like-video text {
     font-size: .6em;
+}
+
+.fh-detail-share-btn .like-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.5em;
+    height: 1.5em;
+    border: none;
+    background: none;
+    padding: 0 .5em;
+    margin-right: 0;
+    position: static;
+}
+
+.fh-detail-share-btn .like-video text {
+    font-size: .8em;
+    color: #d81e06;
 }
 
 .fh-detail-intruduce {
@@ -128,20 +148,18 @@
 }
 
 .fh-pay-link {
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
     background-color: #ffffff;
     width: 94%;
     padding: 10px;
     height: 100%;
 }
+
 .fh-pay-link .pay-btn-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .fh-pay-link .pay-btn-list button {
     width: 30%;
     background-color: #ffffff;

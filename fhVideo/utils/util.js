@@ -25,7 +25,6 @@ var parseNumber = num => {
     }
     return num;
 }
-
 var loadingToast = (duration) => {
     wx.showToast({
         title: '正在加载',

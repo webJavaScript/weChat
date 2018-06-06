@@ -20,8 +20,9 @@
                 {{videoInfo.playtimes}}次
             </text>
         </view>
-        <button open-type="getUserInfo" bindtap="linkPay">
-             赞赏
+        <button open-type="getUserInfo" bindtap="linkPay" class="like-video">
+            <image src="../../images/ico-zan.png"></image>
+            <text>喜欢视频</text>
         </button>
         <button open-type="share" class="share-btn" plain>
             <image src="../../images/ico-share.png"></image>
@@ -63,7 +64,13 @@
 <!-- 赞赏 -->
 <template name="fh-pay-link">
     <view class="fh-pay-link">
-        <view>飞华微视</view>
+        <view class="fh-pay-title">
+            <view class="pay-link-close" bindtap="closePay">X</view>
+            <view class="fh-pay-info">
+                <image src="../../images/logo.jpg" />
+                <text>飞华微视</text>
+            </view>
+        </view>
         <view class="pay-btn-list">
             <button bindtap="linkPayMent" data-pay-money="1">1元</button>
             <button bindtap="linkPayMent" data-pay-money="2">2元</button>

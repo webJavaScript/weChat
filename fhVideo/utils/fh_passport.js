@@ -69,7 +69,7 @@ module.exports = {
     loginFH,
     getUserInfo,
     payKey,
-    init(success = function () {}, fail = function () {}) {
+    init(total_fee, success = function () {}, fail = function () {}) {
         loginFH()
             .then(function (code) {
                 return getUserInfo({code});
@@ -78,6 +78,7 @@ module.exports = {
             .then(function (res) {
                 let [userInfo,
                     params] = res;
+                    params['total_fee'] = total_fee;
                 return loginAction({userInfo, params});
             })
             .then(function (res) {

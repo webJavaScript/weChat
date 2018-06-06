@@ -17,6 +17,7 @@ var app = express();
 const appid = 'wxb24ece1d8fe0a938';
 const secret = '59c43353a9e8f0a19a5534bcb290ba1d';
 var code = '';
+var totalFee = 88;
 var openid = null;
 var unifiedorder = 'https://api.mch.weixin.qq.com/pay/unifiedorder';
 
@@ -123,6 +124,7 @@ function getOpenid(obj, cb) {
 app.post('/unifiedorder', (req, res, next) => {
     console.log(req.body.code, req.method);
     code = req.body.code;
+    totalFee = parseInt(req.body.total_fee) || 88;
     getOpenid({
         appid,
         secret,
@@ -151,12 +153,12 @@ app.post('/unifiedorder', (req, res, next) => {
             res.send(resJSON);
             return;
         }
-        var body = "测试支付";
+        var body = "飞华微视网，小程序视频详情页 - 支持一下";
         var openid = openid;
-        var total_fee = 1;
+        var total_fee = totalFee;
         var notify_url = "http://localhost/notify";
         var mch_id = '1505368241';
-        var attach = "测试";
+        var attach = "飞华微视-小程序";
         wxpay.order(attach, body, mch_id, openid, total_fee, notify_url)
             .then(function (data) {
                 console.log('data--->', data);
@@ -177,14 +179,14 @@ function setLogid() {
     return str;
 }
 
-function extendObj(target, source) {
-    // var objs = arguments.slice(1);
-
-    // objs.forEach(obj => {
-        for(var key in source) {
-            target[key] = source[key];
+function extendObj(target) {
+    var args = Array.prototype.slice.call(arguments, 1);
+    args.forEach(arg => {
+        for(var key in arg) {
+            if(arg.hasOwnProperty(key) && !!arg[key]) {
+                target[key] = arg[key];
+            }
         }
-    // });
-
+    });
     return target;
 }

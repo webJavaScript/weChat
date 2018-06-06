@@ -1,0 +1,7 @@
+/* pages/payment/payment.wxss */
+
+@import "../../utils/template/detail.wxss";
+
+.payment .pay-link-close {
+    display: none;
+}

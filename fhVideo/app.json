@@ -5,7 +5,8 @@
     "pages/video-list/video-list",
     "pages/tabBar-webView/tabBar-webView",
     "pages/video-mfh21/video-mfh21",
-    "pages/iask-mfh21/iask-mfh21"
+    "pages/iask-mfh21/iask-mfh21",
+    "pages/payment/payment"
   ],
   "window": {
     "navigationBarBackgroundColor": "#6797FC",

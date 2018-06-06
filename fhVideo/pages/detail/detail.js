@@ -138,49 +138,26 @@ Page({
       this.autoPlayVideoInNetwork(res.networkType);
     })
   },
+  closePay: function(){
+    this.setData({
+      showPayLink: false
+    })
+  },
   linkPay: function() {
     this.setData({
       showPayLink: true
-    })
-  },
-  linkPayMent: function(ev){
-    var target = ev.target;
-    console.log('target: ', target);
-    var authorize = wx.getStorageSync('authorize');
-    if(authorize) {
-      var appSalt = wx.getStorageSync('appSalt');
-      if(appSalt.appid === 'video'){
-        if(appSalt.openid) {
-          var time_stamp = (+new Date()).toString().slice(0, -3);
-          var nonce_str = Math.random().toString(36).substr(2, 32);
-          var signString = 'appId=wxb24ece1d8fe0a938&nonceStr=' + nonce_str + '&package=prepay_id=wx2017033010242291fcfe0db70013231072&signType=MD5&timeStamp=' + time_stamp;
-          var pay_sign = '1234567890' || MD5(signString + '&key=' + fh_passport.payKey).toUpperCase();
-          wx.requestPayment({
-            'timeStamp': time_stamp,
-            'nonceStr': nonce_str,
-            'package': 'prepay_id=wx2017033010242291fcfe0db70013888888',
-            'signType': 'MD5',
-            'paySign': pay_sign,
-            'success':function(res){
-              console.log('支付成功:', res);
-            },
-            'fail':function(res){
-              console.log('支付失败:', res);
-            }
-         });
-         return;
-        }
-      }
-    }
-
-    fh_passport.init(() => {
-      this.linkPayMent(ev);
-      this.setData({
-        showPayLink: false
-      })
-    }, err => {
-      // 登录失败
-      
     });
+    wx.navigateTo({
+      url: '../payment/payment',
+      success: function(res){
+        // success
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
   }
 })

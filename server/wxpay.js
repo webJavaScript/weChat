@@ -52,11 +52,12 @@ module.exports = {
     return sign.toUpperCase()  
   },
   // 统一下单接口加密获取sign
-  paysignjsapi: function(appid, attach, body, mch_id, nonce_str, notify_url, openid, out_trade_no, spbill_create_ip, total_fee, trade_type) {  
+  paysignjsapi: function(appid, attach, body, limit_pay, mch_id, nonce_str, notify_url, openid, out_trade_no, spbill_create_ip, total_fee, trade_type) {  
     var ret = {  
       appid: appid,  
       attach: attach,  
       body: body,  
+      limit_pay: limit_pay,
       mch_id: mch_id,  
       nonce_str: nonce_str,  
       notify_url: notify_url,  
@@ -74,7 +75,7 @@ module.exports = {
   },
   // 下单接口
   order: function(attach, body, mch_id, openid, total_fee, notify_url) {
-    var bookingNo = 'davdian' + this.createNonceStr() + this.createTimeStamp()
+    var bookingNo = 'wxb24ece1d8fe0a938' + this.createTimeStamp()
     var deferred = Q.defer()  
     var appid = 'wxb24ece1d8fe0a938';  
     var nonce_str = this.createNonceStr()  
@@ -84,6 +85,7 @@ module.exports = {
     formData += "<appid>" + appid + "</appid>" //appid  
     formData += "<attach>" + attach + "</attach>" //附加数据  
     formData += "<body>" + body + "</body>"  
+    formData += "<limit_pay>no_credit</limit_pay>"
     formData += "<mch_id>" + mch_id + "</mch_id>" //商户号  
     formData += "<nonce_str>" + nonce_str + "</nonce_str>" //随机字符串，不长于32位。  
     formData += "<notify_url>" + notify_url + "</notify_url>"  
@@ -92,7 +94,7 @@ module.exports = {
     formData += "<spbill_create_ip>61.50.221.43</spbill_create_ip>"  
     formData += "<total_fee>" + total_fee + "</total_fee>"  
     formData += "<trade_type>JSAPI</trade_type>"  
-    formData += "<sign>" + this.paysignjsapi(appid, attach, body, mch_id, nonce_str, notify_url, openid, bookingNo, '61.50.221.43', total_fee, 'JSAPI') + "</sign>"  
+    formData += "<sign>" + this.paysignjsapi(appid, attach, body, 'no_credit', mch_id, nonce_str, notify_url, openid, bookingNo, '61.50.221.43', total_fee, 'JSAPI') + "</sign>"  
     formData += "</xml>"  
     var self = this
     request({  

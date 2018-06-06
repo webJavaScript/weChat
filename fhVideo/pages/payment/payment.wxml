@@ -1,0 +1,8 @@
+<!--pages/payment/payment.wxml-->
+<import src="../../utils/template/detail.wxml" />
+<view class="payment">
+    <view>
+        1234567890
+    </view>
+    <template is="fh-pay-link" />
+</view>
