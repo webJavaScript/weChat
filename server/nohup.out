@@ -1,0 +1,329 @@
+Server is starting, please goto this URL in a browser to run app: 
+http://localhost:6320/editor-shell.xhtml
+events.js:183
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::6050
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1367:14)
+    at listenInCluster (net.js:1408:12)
+    at Server.listen (net.js:1492:7)
+    at Object.<anonymous> (/Users/fh_mac/WeChat/server/test-server.js:25:24)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+Server is starting, please goto this URL in a browser to run app: 
+http://localhost:6320/editor-shell.xhtml
+listening 6050 port
+0333KsT60i4aCH1kxeW60zOuT603KsTg POST
+url:  https://api.weixin.qq.com/sns/jscode2session?appid=wxb24ece1d8fe0a938&secret=59c43353a9e8f0a19a5534bcb290ba1d&js_code=0333KsT60i4aCH1kxeW60zOuT603KsTg&grant_type=authorization_code
+STATUS:200
+chunk:  {"session_key":"u18oAMV3wClIzKbd2Sy0Mg==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+响应结束********
+getOpenid >> jsons:  {"session_key":"u18oAMV3wClIzKbd2Sy0Mg==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+xml:  <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxb24ece1d8fe0a938]]></appid>
+<mch_id><![CDATA[1505368241]]></mch_id>
+<nonce_str><![CDATA[ufZzgkCcfQ1Q9izp]]></nonce_str>
+<sign><![CDATA[6E07C9B506FD71A82DEE1AD51F996932]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx0614564707140375c0763e130266539816]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+data---> { appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528268206',
+  nonceStr: 'wnx6zswvov',
+  signType: 'MD5',
+  package: 'wx0614564707140375c0763e130266539816',
+  paySign: '8F484836B8B85FF4A07E8EB07C8DC7EF' }
+resJSON---> { openid: 'o-hOl5AmIepb3GjQX-HTRcvQT0E0',
+  appid: 'video',
+  logid: 'aUl8jF2BXAAcFwB48Dxe9mETM1Kx01Lf',
+  errno: 0,
+  servertime: '1528268206',
+  errmsg: 'success',
+  appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528268206',
+  nonceStr: 'wnx6zswvov',
+  signType: 'MD5',
+  package: 'wx0614564707140375c0763e130266539816',
+  paySign: '8F484836B8B85FF4A07E8EB07C8DC7EF' }
+023gPf6Q1OQYZ91MWd6Q1pev6Q1gPf6j POST
+url:  https://api.weixin.qq.com/sns/jscode2session?appid=wxb24ece1d8fe0a938&secret=59c43353a9e8f0a19a5534bcb290ba1d&js_code=023gPf6Q1OQYZ91MWd6Q1pev6Q1gPf6j&grant_type=authorization_code
+STATUS:200
+chunk:  {"session_key":"aJgMUdoFtVNxOOi1uDhw2w==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+响应结束********
+getOpenid >> jsons:  {"session_key":"aJgMUdoFtVNxOOi1uDhw2w==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+xml:  <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxb24ece1d8fe0a938]]></appid>
+<mch_id><![CDATA[1505368241]]></mch_id>
+<nonce_str><![CDATA[sPe3buQWLaBj5TkW]]></nonce_str>
+<sign><![CDATA[C9244D6332FC995DDD8704416664945B]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx0614572475902630cc7616e31783378952]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+data---> { appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528268244',
+  nonceStr: '1e92bx8ovvb',
+  signType: 'MD5',
+  package: 'wx0614572475902630cc7616e31783378952',
+  paySign: '36A7FE4541E2B6BCBECEC3508330A8BB' }
+resJSON---> { openid: 'o-hOl5AmIepb3GjQX-HTRcvQT0E0',
+  appid: 'video',
+  logid: 'f2LqmyrBO4tGCzpCdRVer3b6qPjotSEp',
+  errno: 0,
+  servertime: '1528268244',
+  errmsg: 'success',
+  appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528268244',
+  nonceStr: '1e92bx8ovvb',
+  signType: 'MD5',
+  package: 'wx0614572475902630cc7616e31783378952',
+  paySign: '36A7FE4541E2B6BCBECEC3508330A8BB' }
+Server is starting, please goto this URL in a browser to run app: 
+http://localhost:6320/editor-shell.xhtml
+listening 6050 port
+033PNy7g24quTA0BvJ7g2zMw7g2PNy7I POST
+url:  https://api.weixin.qq.com/sns/jscode2session?appid=wxb24ece1d8fe0a938&secret=59c43353a9e8f0a19a5534bcb290ba1d&js_code=033PNy7g24quTA0BvJ7g2zMw7g2PNy7I&grant_type=authorization_code
+STATUS:200
+chunk:  {"session_key":"ThJywL2wHPYlHnafa9CgXw==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+响应结束********
+getOpenid >> jsons:  {"session_key":"ThJywL2wHPYlHnafa9CgXw==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+xml:  <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxb24ece1d8fe0a938]]></appid>
+<mch_id><![CDATA[1505368241]]></mch_id>
+<nonce_str><![CDATA[TJgOKswChhhdisiu]]></nonce_str>
+<sign><![CDATA[1AF08AF19EDAD18731B1E47059858D6F]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx06150002062312c02e5a5e660301613084]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+data---> { appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528268401',
+  nonceStr: 'q8ixairb42c',
+  signType: 'MD5',
+  package: 'wx06150002062312c02e5a5e660301613084',
+  paySign: '68ACB80FB5656011857BD03DF57E9C9B' }
+resJSON---> { openid: 'o-hOl5AmIepb3GjQX-HTRcvQT0E0',
+  appid: 'video',
+  logid: 'cYcXj4YmxrTCOqYmGUe5uu6ZGNgcaZwv',
+  errno: 0,
+  servertime: '1528268401',
+  errmsg: 'success',
+  appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528268401',
+  nonceStr: 'q8ixairb42c',
+  signType: 'MD5',
+  package: 'wx06150002062312c02e5a5e660301613084',
+  paySign: '68ACB80FB5656011857BD03DF57E9C9B' }
+033w5TGf16EYJz0YBtFf1Lh1Hf1w5TGc POST
+url:  https://api.weixin.qq.com/sns/jscode2session?appid=wxb24ece1d8fe0a938&secret=59c43353a9e8f0a19a5534bcb290ba1d&js_code=033w5TGf16EYJz0YBtFf1Lh1Hf1w5TGc&grant_type=authorization_code
+STATUS:200
+chunk:  {"session_key":"+A2txQkqehGWaI3gBRQhHg==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+响应结束********
+getOpenid >> jsons:  {"session_key":"+A2txQkqehGWaI3gBRQhHg==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+xml:  <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxb24ece1d8fe0a938]]></appid>
+<mch_id><![CDATA[1505368241]]></mch_id>
+<nonce_str><![CDATA[onOtNQu6AKh9IqhK]]></nonce_str>
+<sign><![CDATA[1E3D278A901E2F0D788B7E7445FA4232]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx061518539888669b660a84952831561429]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+data---> { appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528269533',
+  nonceStr: 'ssqe5u7hhu',
+  signType: 'MD5',
+  package: 'wx061518539888669b660a84952831561429',
+  paySign: 'F9EB74DBAB09E70C65E5AC06907F595A' }
+resJSON---> { openid: 'o-hOl5AmIepb3GjQX-HTRcvQT0E0',
+  appid: 'video',
+  logid: '5HIH24ihU8VF4trIklHK8vu1kOv3YifR',
+  errno: 0,
+  servertime: '1528269533',
+  errmsg: 'success',
+  appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528269533',
+  nonceStr: 'ssqe5u7hhu',
+  signType: 'MD5',
+  package: 'wx061518539888669b660a84952831561429',
+  paySign: 'F9EB74DBAB09E70C65E5AC06907F595A' }
+033r1uic1Vbo3u05pLfc17Vcic1r1uiR POST
+url:  https://api.weixin.qq.com/sns/jscode2session?appid=wxb24ece1d8fe0a938&secret=59c43353a9e8f0a19a5534bcb290ba1d&js_code=033r1uic1Vbo3u05pLfc17Vcic1r1uiR&grant_type=authorization_code
+STATUS:200
+chunk:  {"session_key":"+A2txQkqehGWaI3gBRQhHg==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+响应结束********
+getOpenid >> jsons:  {"session_key":"+A2txQkqehGWaI3gBRQhHg==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+xml:  <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxb24ece1d8fe0a938]]></appid>
+<mch_id><![CDATA[1505368241]]></mch_id>
+<nonce_str><![CDATA[B6eg1tLONAHUFUtF]]></nonce_str>
+<sign><![CDATA[881E514A5C340BAF05D6C11F8F61D012]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx0615190769791256ad3841a52786708114]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+data---> { appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528269547',
+  nonceStr: '46qc81idf8j',
+  signType: 'MD5',
+  package: 'wx0615190769791256ad3841a52786708114',
+  paySign: '873DE7D42ECE1388676E408E8D7196EA' }
+resJSON---> { openid: 'o-hOl5AmIepb3GjQX-HTRcvQT0E0',
+  appid: 'video',
+  logid: '9ML5lKLDo95745jFgzdZodeUPDNTYtPt',
+  errno: 0,
+  servertime: '1528269547',
+  errmsg: 'success',
+  appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528269547',
+  nonceStr: '46qc81idf8j',
+  signType: 'MD5',
+  package: 'wx0615190769791256ad3841a52786708114',
+  paySign: '873DE7D42ECE1388676E408E8D7196EA' }
+033AdLH02cOUa01dtrH02qATH02AdLHA POST
+url:  https://api.weixin.qq.com/sns/jscode2session?appid=wxb24ece1d8fe0a938&secret=59c43353a9e8f0a19a5534bcb290ba1d&js_code=033AdLH02cOUa01dtrH02qATH02AdLHA&grant_type=authorization_code
+STATUS:200
+chunk:  {"session_key":"+A2txQkqehGWaI3gBRQhHg==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+响应结束********
+getOpenid >> jsons:  {"session_key":"+A2txQkqehGWaI3gBRQhHg==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+xml:  <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxb24ece1d8fe0a938]]></appid>
+<mch_id><![CDATA[1505368241]]></mch_id>
+<nonce_str><![CDATA[LaEeGKT9gPM34mri]]></nonce_str>
+<sign><![CDATA[9871276507FE5CC11F6C4B7BA3C089A5]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx06151919168998140c0627421874632909]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+data---> { appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528269558',
+  nonceStr: 'kpiy3bnqya',
+  signType: 'MD5',
+  package: 'wx06151919168998140c0627421874632909',
+  paySign: '24FE44B7504AD0AA875F458E33E27DE4' }
+resJSON---> { openid: 'o-hOl5AmIepb3GjQX-HTRcvQT0E0',
+  appid: 'video',
+  logid: 'n43GwwUoixnzJ4ykQaDSc4VTnpLstxEw',
+  errno: 0,
+  servertime: '1528269558',
+  errmsg: 'success',
+  appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528269558',
+  nonceStr: 'kpiy3bnqya',
+  signType: 'MD5',
+  package: 'wx06151919168998140c0627421874632909',
+  paySign: '24FE44B7504AD0AA875F458E33E27DE4' }
+0331jYg01DC6G023Inh01CvSg011jYgV POST
+url:  https://api.weixin.qq.com/sns/jscode2session?appid=wxb24ece1d8fe0a938&secret=59c43353a9e8f0a19a5534bcb290ba1d&js_code=0331jYg01DC6G023Inh01CvSg011jYgV&grant_type=authorization_code
+STATUS:200
+chunk:  {"session_key":"+A2txQkqehGWaI3gBRQhHg==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+响应结束********
+getOpenid >> jsons:  {"session_key":"+A2txQkqehGWaI3gBRQhHg==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+xml:  <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxb24ece1d8fe0a938]]></appid>
+<mch_id><![CDATA[1505368241]]></mch_id>
+<nonce_str><![CDATA[9M400KEsMq0uEudh]]></nonce_str>
+<sign><![CDATA[11FD197C2C60CC44091D62A21561566D]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx06151937278810eaa6b9ba330391622503]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+data---> { appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528269576',
+  nonceStr: 'll7uj1l8cng',
+  signType: 'MD5',
+  package: 'wx06151937278810eaa6b9ba330391622503',
+  paySign: '362143E85D3B1FA0B40D5F28E9661C0F' }
+resJSON---> { openid: 'o-hOl5AmIepb3GjQX-HTRcvQT0E0',
+  appid: 'video',
+  logid: 'LCxgM5eAjMDdebzjUraxHwo9F7IRhqQG',
+  errno: 0,
+  servertime: '1528269576',
+  errmsg: 'success',
+  appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528269576',
+  nonceStr: 'll7uj1l8cng',
+  signType: 'MD5',
+  package: 'wx06151937278810eaa6b9ba330391622503',
+  paySign: '362143E85D3B1FA0B40D5F28E9661C0F' }
+023EvFHp0U6Xdq11kQHp0QpgHp0EvFHD POST
+url:  https://api.weixin.qq.com/sns/jscode2session?appid=wxb24ece1d8fe0a938&secret=59c43353a9e8f0a19a5534bcb290ba1d&js_code=023EvFHp0U6Xdq11kQHp0QpgHp0EvFHD&grant_type=authorization_code
+STATUS:200
+chunk:  {"session_key":"+A2txQkqehGWaI3gBRQhHg==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+响应结束********
+getOpenid >> jsons:  {"session_key":"+A2txQkqehGWaI3gBRQhHg==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+xml:  <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxb24ece1d8fe0a938]]></appid>
+<mch_id><![CDATA[1505368241]]></mch_id>
+<nonce_str><![CDATA[oh3kseRonCm7OLiu]]></nonce_str>
+<sign><![CDATA[C5D04D66AD91989C7FC22AD09E556143]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx0615202395257339b00300af0306832084]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+data---> { appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528269623',
+  nonceStr: 'vz8ltcfp3pg',
+  signType: 'MD5',
+  package: 'wx0615202395257339b00300af0306832084',
+  paySign: '3A24B78E5ED2D11E93DE4E4964F5A4B0' }
+resJSON---> { openid: 'o-hOl5AmIepb3GjQX-HTRcvQT0E0',
+  appid: 'video',
+  logid: 'WMLVQYJLdu0IuIvaFWiyp0B1ozJLk6Az',
+  errno: 0,
+  servertime: '1528269623',
+  errmsg: 'success',
+  appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528269623',
+  nonceStr: 'vz8ltcfp3pg',
+  signType: 'MD5',
+  package: 'wx0615202395257339b00300af0306832084',
+  paySign: '3A24B78E5ED2D11E93DE4E4964F5A4B0' }
+033LiMP21UhzkN1IwIQ21GVRP21LiMPa POST
+url:  https://api.weixin.qq.com/sns/jscode2session?appid=wxb24ece1d8fe0a938&secret=59c43353a9e8f0a19a5534bcb290ba1d&js_code=033LiMP21UhzkN1IwIQ21GVRP21LiMPa&grant_type=authorization_code
+STATUS:200
+chunk:  {"session_key":"9TpY6ZaUlkcoFCo+PAnBzw==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+响应结束********
+getOpenid >> jsons:  {"session_key":"9TpY6ZaUlkcoFCo+PAnBzw==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+xml:  <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxb24ece1d8fe0a938]]></appid>
+<mch_id><![CDATA[1505368241]]></mch_id>
+<nonce_str><![CDATA[QMGyaKjMIhAWaxQc]]></nonce_str>
+<sign><![CDATA[970531BD0682D0AA087CF0FA0AAEDAF6]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx0615255464437655dd03abb00665043066]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+data---> { appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528269954',
+  nonceStr: '1zwkxf1skql',
+  signType: 'MD5',
+  package: 'wx0615255464437655dd03abb00665043066',
+  paySign: 'A6B6918583263F967B34995AA018E103' }
+resJSON---> { openid: 'o-hOl5AmIepb3GjQX-HTRcvQT0E0',
+  appid: 'video',
+  logid: 'RgjyDgugcmiObWhGFWwZ7VFM5ECYGTJF',
+  errno: 0,
+  servertime: '1528269954',
+  errmsg: 'success',
+  appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528269954',
+  nonceStr: '1zwkxf1skql',
+  signType: 'MD5',
+  package: 'wx0615255464437655dd03abb00665043066',
+  paySign: 'A6B6918583263F967B34995AA018E103' }

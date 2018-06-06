@@ -120,7 +120,9 @@ Page({
       this.linkPayMent(ev);
     }, err => {
       // 登录失败
-
+      wx.hideLoading();
+      wx.showLoading({title: '支付失败'});
+      setTimeout(wx.hideLoading, 1000);
     });
   }
 

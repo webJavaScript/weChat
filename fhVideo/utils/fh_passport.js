@@ -4,7 +4,7 @@
 var config = require('../utils/config.js');
 var url = 'https://passport.fh21.com.cn/miniapps/login' || config["fh-config"]['requestUrl'];
 url = 'http://192.168.10.190:6050/video/login';
-url = 'http://localhost:6050/unifiedorder';
+url = 'http://192.168.10.182:6050/unifiedorder';
 var Promise = require('../vendor/es6-promise.js');
 var key = "tBjuMyxiVmNA1tSOQa171JJ4aDoIVHA9";
 
@@ -92,9 +92,12 @@ module.exports = {
                     appid,
                     openid
                 }
-
-                wx.setStorageSync('authorize', true);
-                wx.setStorageSync('appSalt', appSalt);
+                try{
+                    wx.setStorageSync('authorize', 'true');
+                    wx.setStorageSync('appSalt', appSalt);
+                } catch(err){
+                    console.log('setStorageSync >>> authorize || appSalt:', err);
+                }
 
                 success(userInfo, data);
             })

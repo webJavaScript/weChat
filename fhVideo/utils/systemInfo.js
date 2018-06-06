@@ -15,7 +15,7 @@ try {
 
 let {system} = systemInfo;
 
-const iOSMasterVesrion = parseInt(system.replace(/^iOs\s*/gi, '')) || false;
+const iOSMasterVesrion = (system && parseInt(system.replace(/^iOs\s*/gi, ''))) || false;
 const iOS = /iOs/gi.test(system);
 
 export {systemInfo, iOSMasterVesrion, iOS};
