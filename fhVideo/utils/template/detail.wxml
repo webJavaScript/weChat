@@ -67,8 +67,10 @@
         <view class="fh-pay-title">
             <view class="pay-link-close" bindtap="closePay">X</view>
             <view class="fh-pay-info">
-                <image src="../../images/logo.jpg" />
                 <text>飞华微视</text>
+                <view class="fh-pay-info-image">
+                    <image src="../../images/logo.jpg" />
+                </view>
             </view>
         </view>
         <view class="pay-btn-list">

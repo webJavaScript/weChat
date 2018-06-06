@@ -52,6 +52,12 @@
 					"name": "detail",
 					"pathName": "pages/detail/detail",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "payment",
+					"pathName": "pages/payment/payment",
+					"query": ""
 				}
 			]
 		}
