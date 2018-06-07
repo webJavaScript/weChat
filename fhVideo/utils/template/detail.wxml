@@ -2,23 +2,13 @@
 <template name="fh-detail-video">
     <view class="fh-detail-video">
         <view class="video-play">
-            <video 
-            src="{{videoInfo.video_url}}" 
-            class="fh-video-show" 
-            bindplay="videoPlay"
-            autoplay="{{videoAutoPlay}}"
-            controls  
-            objectFit="cover"
-            poster="{{videoInfo.litpic || ''}}"
-            style="{{'height:' + videoHeight}}"></video>
+            <video src="{{videoInfo.video_url}}" class="fh-video-show" bindplay="videoPlay" autoplay="{{videoAutoPlay}}" controls objectFit="cover" poster="{{videoInfo.litpic || ''}}" style="{{'height:' + videoHeight}}"></video>
         </view>
     </view>
     <view class="fh-detail-share-btn">
         <view class="fh-video-playtimes">
             <image src="../../images/ico-video.png"></image>
-            <text>
-                {{videoInfo.playtimes}}次
-            </text>
+            <text>{{videoInfo.playtimes}}次</text>
         </view>
         <button open-type="getUserInfo" bindtap="linkPay" class="like-video">
             <image src="../../images/ico-zan.png"></image>
@@ -30,7 +20,6 @@
         </button>
     </view>
 </template>
-
 <!-- 视频介绍 -->
 <template name="fh-detail-intruduce">
     <view class="fh-detail-intruduce">
@@ -55,13 +44,10 @@
                 </view>
             </view>
         </view>
-        <view class="video-description">
-            {{videoInfo.description}}
-        </view>
+        <view class="video-description">{{videoInfo.description}}</view>
     </view>
 </template>
-
-<!-- 赞赏 -->
+<!-- 赞赏 - 选择金额 -->
 <template name="fh-pay-link">
     <view class="fh-pay-link">
         <view class="fh-pay-title">
@@ -74,12 +60,40 @@
             </view>
         </view>
         <view class="pay-btn-list">
+            <!-- <button bindtap="linkPayMent" data-pay-money="0.01">0.01元</button> -->
             <button bindtap="linkPayMent" data-pay-money="1">1元</button>
             <button bindtap="linkPayMent" data-pay-money="2">2元</button>
             <button bindtap="linkPayMent" data-pay-money="6">6元</button>
             <button bindtap="linkPayMent" data-pay-money="8">8元</button>
             <button bindtap="linkPayMent" data-pay-money="48">48元</button>
             <button bindtap="linkPayMent" data-pay-money="98">98元</button>
+        </view>
+        <view class="pay-btn-other">
+            <text bindtap="linkPayMentOther">其他金额</text>
+        </view>
+    </view>
+</template>
+<!-- 赞赏 - 其他金额 -->
+<template name="fh-pay-link-other">
+    <view class="fh-pay-link-other">
+        <view class="fh-pay-title">
+            <view class="pay-link-close" bindtap="closePay">X</view>
+            <view class="fh-pay-info">
+                <view class="fh-pay-info-image">
+                    <image src="../../images/logo.jpg" />
+                </view>
+                <text>飞华微视</text>
+            </view>
+        </view>
+        <view class="fh-pay-content">
+            <view class="fh-pay-content-input">
+                <input class="pay-money" type="digit" maxlength="6" placeholder="0" focus="{{true}}" bindinput="handlerPayInput" />
+                <text>元</text>
+            </view>
+            <view class="fh-pay-content-input">
+                <input type="text" placeholder="请输入姓名，电话和赞赏留言" bindinput="handlerMessageInput" />
+            </view>
+            <text class="fh-pay-content-btn" bindtap="linkPayMent" data-pay-money="{{payMoney || 0}}">赞赏</text>
         </view>
     </view>
 </template>

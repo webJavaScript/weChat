@@ -147,7 +147,8 @@
     margin: .4em 0;
 }
 
-.fh-pay-link {
+.fh-pay-link,
+.fh-pay-link-other {
     background-color: #fafafa;
     width: 100%;
     height: 100vh;
@@ -163,7 +164,8 @@
 .fh-pay-link .fh-pay-title .fh-pay-info {
     padding-top: 1.5em;
 }
-.fh-pay-link .fh-pay-title .fh-pay-info-image {
+.fh-pay-link .fh-pay-title .fh-pay-info-image,
+.fh-pay-link-other .fh-pay-title .fh-pay-info-image {
     width: 4em;
     height: 4em;
     margin: 0 auto;
@@ -172,7 +174,8 @@
     position: relative;
     top: 2em;
 }
-.fh-pay-link .fh-pay-title .fh-pay-info-image image {
+.fh-pay-link .fh-pay-title .fh-pay-info-image image,
+.fh-pay-link-other .fh-pay-title .fh-pay-info-image image {
     width: 100%;
     height: 100%;
 }
@@ -181,7 +184,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 4em;
-    padding: 10px;
+    padding: 10rpx;
 }
 
 .fh-pay-link .pay-btn-list button {
@@ -189,5 +192,62 @@
     background-color: #ffffff;
     border: 1px solid orange;
     color: orange;
-    margin-top: 10px;
+    margin-top: 1em;
+}
+
+.fh-pay-link .pay-btn-other {
+    text-align: center;
+    color: #445374;
+    padding: 1em;
+}
+.fh-pay-link-other {
+    background: #f3f3f3;
+}
+.fh-pay-link-other .fh-pay-title {
+    padding: 10rpx;
+    text-align: center;
+}
+.fh-pay-link-other .fh-pay-title .fh-pay-info-image {
+    top: 0;
+    margin: 2em auto 1em;
+}
+.fh-pay-link-other .fh-pay-content {
+    padding: 10px;
+}
+
+.fh-pay-link-other .fh-pay-content .fh-pay-content-input {
+    display: flex;
+    width: 100%;
+    height: 2em;
+    line-height: 2em;
+    border: 1rpx solide #333333;
+    border-radius: 6rpx;
+    padding: .2em 0 .2em .2em;
+    margin: 0 0 1em;
+    background:white;
+}
+.fh-pay-link-other .fh-pay-content .fh-pay-content-input input {
+    flex-grow: 1;
+    height: 100%;
+    line-height: 1;
+}
+.fh-pay-link-other .fh-pay-content .fh-pay-content-input input.pay-money {
+    text-align: right;
+    margin-right: .2em;
+}
+.fh-pay-link-other .fh-pay-content .fh-pay-content-input text {
+     width: 2em;
+}
+.fh-pay-link-other .fh-pay-content .fh-pay-content-btn {
+    border: none;
+    background: #f6bc13;
+    color: #ffffff;
+    width: 10em;
+    height: 3em;
+    margin-left: -5em;
+    line-height: 3em;
+    text-align: center;
+    position: fixed;
+    bottom: 1em;
+    left: 50%;
 }

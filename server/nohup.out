@@ -1,0 +1,42 @@
+nohup: test-server.js: No such file or directory
+Server is starting, please goto this URL in a browser to run app: 
+http://localhost:6320/editor-shell.xhtml
+listening 6050 port
+033D7eCD0DEmve22YoFD03DDCD0D7eCb POST
+url:  https://api.weixin.qq.com/sns/jscode2session?appid=wxb24ece1d8fe0a938&secret=59c43353a9e8f0a19a5534bcb290ba1d&js_code=033D7eCD0DEmve22YoFD03DDCD0D7eCb&grant_type=authorization_code
+STATUS:200
+chunk:  {"session_key":"FPncQojZ1D68\/sl+8xSnMg==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+响应结束********
+getOpenid >> jsons:  {"session_key":"FPncQojZ1D68\/sl+8xSnMg==","openid":"o-hOl5AmIepb3GjQX-HTRcvQT0E0"}
+xml:  <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxb24ece1d8fe0a938]]></appid>
+<mch_id><![CDATA[1505368241]]></mch_id>
+<nonce_str><![CDATA[U4gE7AB4JBZ4K92V]]></nonce_str>
+<sign><![CDATA[36484B42746233E243C62E74EC9C1FA2]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx0709165565304199b8735c2c2474360672]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+data---> { appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528334214',
+  nonceStr: '38o9bo8gqy',
+  signType: 'MD5',
+  package: 'wx0709165565304199b8735c2c2474360672',
+  paySign: '369B3C755729BFCA847853DEB271E184',
+  outTradeNo: 'videojrlgaft6wf1528334214',
+  totalFee: 1 }
+resJSON---> { openid: 'o-hOl5AmIepb3GjQX-HTRcvQT0E0',
+  appid: 'video',
+  logid: 'OFprK063pdbjw2T4Vb4vFzFmJOjWjQsU',
+  errno: 0,
+  servertime: '1528334214',
+  errmsg: 'success',
+  appId: 'wxb24ece1d8fe0a938',
+  timeStamp: '1528334214',
+  nonceStr: '38o9bo8gqy',
+  signType: 'MD5',
+  package: 'wx0709165565304199b8735c2c2474360672',
+  paySign: '369B3C755729BFCA847853DEB271E184',
+  outTradeNo: 'videojrlgaft6wf1528334214',
+  totalFee: 1 }

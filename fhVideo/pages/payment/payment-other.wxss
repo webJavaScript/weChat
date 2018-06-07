@@ -1,0 +1,17 @@
+/* pages/payment/payment-other.wxss */
+@import './payment.wxss';
+
+.valide {
+    width: 100%;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    transition: all 0.5s;
+    background: #efd4d7;
+    position: fixed;
+    top: -2em;
+    color: gray;
+}
+.pay-money-valide .pay-money {
+    color: #ea5613;
+}

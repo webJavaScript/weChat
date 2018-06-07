@@ -75,7 +75,7 @@ module.exports = {
   },
   // 下单接口
   order: function(attach, body, mch_id, openid, total_fee, notify_url) {
-    var bookingNo = 'wxb24ece1d8fe0a938' + this.createTimeStamp()
+    var bookingNo = 'video' + this.createNonceStr() + this.createTimeStamp()
     var deferred = Q.defer()  
     var appid = 'wxb24ece1d8fe0a938';  
     var nonce_str = this.createNonceStr()  
@@ -104,7 +104,7 @@ module.exports = {
     }, function(err, response, body) {  
       if (!err && response.statusCode == 200) {  
         var prepay_id = self.getXMLNodeValue('prepay_id', body.toString("utf-8")) 
-        var tmp = prepay_id.split('[')  
+        var tmp = prepay_id.split('[')
         var tmp1 = tmp[2].split(']')  
         //签名  
         var _paySignjs = self.paysignjs(appid, nonce_str, 'prepay_id=' + tmp1[0], 'MD5', timeStamp)  
@@ -114,7 +114,9 @@ module.exports = {
           nonceStr: nonce_str,  
           signType: "MD5",  
           package: tmp1[0],  
-          paySign: _paySignjs  
+          paySign: _paySignjs,
+          outTradeNo: bookingNo,
+          totalFee: total_fee
         }
         deferred.resolve(args)  
       } else {  

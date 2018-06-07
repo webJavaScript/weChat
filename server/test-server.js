@@ -1,4 +1,3 @@
-//依赖 connect
 
 var http = require('http'),
     https = require('https'),
@@ -6,7 +5,8 @@ var http = require('http'),
     request = require('request'),
     bodyParser = require('body-parser'),
     crypto = require('crypto'),
-    wxpay = require('./wxpay.js');
+    wxpay = require('./wxpay.js'),
+    fs = require('fs');
 
 //允许传送隐藏文件
 var options = {
@@ -16,19 +16,17 @@ var app = express();
 
 const appid = 'wxb24ece1d8fe0a938';
 const secret = '59c43353a9e8f0a19a5534bcb290ba1d';
+const unifiedorder = 'https://api.mch.weixin.qq.com/pay/unifiedorder';
 var code = '';
 var totalFee = 88;
 var openid = null;
-var unifiedorder = 'https://api.mch.weixin.qq.com/pay/unifiedorder';
+var options = {
+    pfx: fs.readFileSync('./server/server.pfx'),
+    passphrase: '1236547'
+};
 
-console.log('Server is starting, please goto this URL in a browser to run app: \nhttp://localhost:6320/editor-shell.xhtml');
-http.createServer(app).listen(6050, () => {
-    console.log('listening 6050 port');
-});
-
-// app.configure(() => {
-// app.use(express.bodyParser({ keepExtensions: true, uploadDir: '/tmp'}));
-// })
+http.createServer(app).listen(8080);
+https.createServer(options, app).listen(8081);
 
 app.use(bodyParser.json({
     limit: '1mb'
@@ -39,9 +37,7 @@ app.use(bodyParser.urlencoded({ //此项必须在 bodyParser.json 下面,为参�
 
 app.get('/', (req, res, next) => {
     console.log('someone request');
-    res.json({
-        appid: '1234567890'
-    });
+    res.send('{success: true, msg: "Hello World"}');
 });
 
 app.post('/video/login', (req, res, next) => {
