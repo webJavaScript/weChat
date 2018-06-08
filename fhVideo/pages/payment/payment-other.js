@@ -59,7 +59,11 @@ Page({
   onReachBottom: function () {
   
   },
-
+  closePay: function(){
+    wx.navigateBack({
+      delta: 2, // 回退前 delta(默认为1) 页面
+    })
+  },
   linkPayMent: function (ev) {
     var target = ev.target;
     var total_fee = target.dataset['payMoney'] * 100;
@@ -70,31 +74,17 @@ Page({
       const payMentData = this.data.payMentData;
       if (appSalt.appid === 'video') {
         if (appSalt.openid && !!payMentData) {
-          wx.requestPayment({
-            'timeStamp': payMentData.timeStamp,
-            'nonceStr': payMentData.nonceStr,
-            'package': 'prepay_id=' + payMentData.package,
-            'signType': 'MD5',
-            'paySign': payMentData.paySign,
-            'success': res => {
-              console.log('支付成功:', res);
+          payMentData.message = this.data.message;
+          fh_passport.payMent(payMentData).then(data => {
+            this.setData({
+              payMentData: null
+            });
+            setTimeout(this.closePay, 1000);
+          }, err => {
+            if (/fail cancel/.test(err['errMsg'])) {
               this.setData({
-                payMentData: null
-              });
-              wx.hideLoading();
-              wx.showLoading({title: '支付成功'});
-              setTimeout(this.closePay, 1000);
-            },
-            'fail': err => {
-              console.log('支付失败:', err);
-              if (/fail cancel/.test(err['errMsg'])) {
-                this.setData({
                   payMentData: null
-                });
-              }
-              wx.hideLoading();
-              wx.showLoading({title: '支付失败'});
-              setTimeout(wx.hideLoading, 1000);
+              });
             }
           });
           return;

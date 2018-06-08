@@ -1,0 +1,23 @@
+{
+  "name": "wxapps",
+  "version": "1.0.0",
+  "description": "this is a wxapp test server",
+  "main": "test-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sunxiaopeng",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect": "^3.6.6",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "forever": "^0.15.3",
+    "mongodb": "^3.1.0-beta4",
+    "mongodb-server": "^1.0.0",
+    "pm2": "^2.10.4",
+    "q": "^1.5.1",
+    "request": "^2.87.0"
+  }
+}
