@@ -5,7 +5,7 @@ var request = require("request")  ;
 var crypto = require('crypto')  ;
 var ejs = require('ejs');
 var fs = require('fs')  ;
-var key = 'tBjuMyxiVmNA1tSOQa171JJ4aDoIVHA9';
+var key = '';
 module.exports = {
   // 获取prepay_id
   getXMLNodeValue: function(node_name, xml) {  

@@ -43,7 +43,7 @@ app.get('/', (req, res, next) => {
 app.post('/video/login', (req, res, next) => {
     console.log(req.body.code, req.method);
     const appid = 'wxb24ece1d8fe0a938';
-    const secret = '59c43353a9e8f0a19a5534bcb290ba1d';
+    const secret = '';
     const code = req.body.code;
     getOpenid({
         appid,
