@@ -53,6 +53,11 @@ var getUserInfo = (params = {}) => {
     return new Promise(function (resolve, reject) {
         wx.getUserInfo({
             success(res) {
+                try {
+                    wx.setStorageSync('userInfo', res.userInfo);
+                } catch(err) {
+                    console.log('storage userInfo failed: ', err);
+                }
                 resolve([res.userInfo, params]);
             },
             fail() {

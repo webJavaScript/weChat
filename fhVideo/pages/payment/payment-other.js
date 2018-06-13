@@ -29,7 +29,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    try{
+      var authorize = wx.getStorageSync('authorize');
+      var userInfo = wx.getStorageSync('userInfo');
+      if(authorize && userInfo) {
+        this.setData({
+          userInfo
+        })
+      }
+    } catch(err) {
+      console.log('get storage userInfo failed: ', err);
+    }
   },
 
   /**
@@ -58,6 +68,18 @@ Page({
    */
   onReachBottom: function () {
   
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function (res) {
+    if(res.from == 'button') {
+      console.log('click target bind onShareAppMessage:', res.target);
+    }
+    wx.showShareMenu({
+      withShareTicket: true
+    })
   },
   closePay: function(){
     wx.navigateBack({

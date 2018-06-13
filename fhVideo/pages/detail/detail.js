@@ -20,7 +20,6 @@ Page({
       videoId: options.id,
       videoHeight: parseFloat(util.windowWidth * 9 / 16) + 'px'
     });
-    
     wx.getNetworkType({
       success: res => {
         this.autoPlayVideoInNetwork(res.networkType);
@@ -61,7 +60,7 @@ Page({
     wx.showShareMenu({
       withShareTicket: true
     })
-    console.log(location)
+    console.log('imageUrl: ', videoInfo['litpic'] + '_215x172');
     return {
       title: videoInfo['shorttitle'],
       imageUrl: videoInfo['litpic'] + '_215x172',

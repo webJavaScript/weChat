@@ -2,6 +2,6 @@
 <view class="payment">
     <view class="valide" style="top: {{valide_total_fee ? '0' : ''}}">单个赞赏金额不可超过{{total_fee}}元</view>
     <view class="{{valide_total_fee ? 'pay-money-valide' : ''}}">
-        <template is="fh-pay-link-other" data="{{payMoney}}" />
+        <template is="fh-pay-link-other" data="{{payMoney, userInfo}}" />
     </view>
 </view>

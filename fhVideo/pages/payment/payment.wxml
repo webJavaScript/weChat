@@ -1,5 +1,5 @@
 <!--pages/payment/payment.wxml-->
 <import src="../../utils/template/detail.wxml" />
 <view class="payment">
-    <template is="fh-pay-link" />
+    <template is="fh-pay-link-detail" data="{{userInfo}}" />
 </view>
